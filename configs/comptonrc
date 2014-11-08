@@ -1,0 +1,122 @@
+### Производительность
+# Движок эффектов (--backend)
+backend = "xrender";
+# Метод vsync (--vsync)
+vsync = "none";
+# Частота обновления (--refresh-rate)
+refresh-rate = 0;
+# Ограничение количества отрисовок (--sw-opti)
+sw-opti = false;
+
+# При использовании glx:
+#backend = "glx";
+#vsync = "opengl-swc";
+# Не использовать буфер ???трафаретов (--glx-no-stencil)
+#glx-no-stencil = true;
+# ??? (--glx-swap-method)
+#glx-swap-method = 1;
+# Копировать неизменившиеся области из первичного буфера (--glx-copy-from-front)
+#glx-copy-from-front = false;
+# Копировать неизменившиеся области при помощи MESA_copy_sub_buffer (-- glx-use-copysubbuffermesa)
+#glx-use-copysubbuffermesa = true;
+# Использовать шейдеры GL_EXT_gpu_shader4
+#glx-use-gpushader4 = true;
+# Отрисовка на оверлейных окнах X Composite вместо окна рута (--paint-on-overlay)
+#paint-on-overlay = true;
+
+
+### Прочее
+# Определяет окна со скругленными углами (--detect-rounded-corners)
+detect-rounded-corners = true;
+# Определяет параметр _NET_WM_OPACITY на клиентских окнах (--detect-client-opacity)
+detect-client-opacity = true;
+# Группировать окна приложения на основе параметра WM_TRANSIENT_FOR (--detect-transient)
+detect-transient = true;
+# Группировать окна приложения на основе параметра WM_CLIENT_LEADER (--detect-client-leader)
+detect-client-leader = true;
+# Затемнение неактивных окон (--inactive-dim)
+inactive-dim = 0.1;
+# Игнорировать при затемнении прозрачность окон (--inactive-dim-fixed)
+inactive-dim-fixed = true;
+# Использовать параметр EWMH _NET_ACTIVE_WINDOW для определния активного окна (--use-ewmh-active-win)
+use-ewmh-active-win = true;
+
+
+### Тени
+# Включить тени (-c)
+shadow = true;
+# Тень на окнах Drag-and-Drop (-G)
+no-dnd-shadow = true;
+# Тень на окнах доков/панелей (-C)
+no-dock-shadow = true;
+# Радиус тени (-r)
+shadow-radius = 10;
+# Смещение тени слева (-l)
+shadow-offset-x = -4;
+# Смещение тени сверху (-t)
+shadow-offset-y = -4;
+# Непрозрачность теней (-o)
+shadow-opacity = 0.7;
+# Значение красного цвета тени (--shadow-red)
+shadow-red = 0.0;
+# Значение зеленого цвета тени (--shadow-green)
+shadow-green = 0.0;
+# Значение синего цвета тени (--shadow-blue)
+shadow-blue = 0.0;
+# Очищает маску тени позади окна (-z)
+clear-shadow = true;
+# Игнорировать тени на фигурных окнах (--shadow-ignore-shaped)
+shadow-ignore-shaped = false;
+
+
+### Затухание окон
+# Включить затухание (-f)
+fading = true;
+# Скорость затухания (-D)
+fade-delta = 10;
+# "Шаг" прозрачности при проявлении (-I)
+fade-in-step = 0.2;
+# "Шаг" прозрачности при затухании (-O)
+fade-out-step = 0.2;
+# Отключить затухание окнон при открытии/закрытии (--no-fading-openclose)
+no-fading-openclose = false;
+
+
+### Прозрачность
+# Прозрачность меню (-m)
+menu-opacity = 1.0;
+# Непрозрачность неактивных окон (-i)
+inactive-opacity = 1.0;
+# Непрозрачность активных окон (--active-opacity)
+active-opacity = 1.0;
+# Непрозрачность строки заголовка и границ окна (-e)
+frame-opacity = 0.9;
+# Принудительное перекрывание окон с параметром _NET_WM_OPACITY (--inactive-opacity-override)
+inactive-opacity-override = true;
+
+
+### "Черный список" окон
+# Исключение затухания для окон (--fade-exclude)
+#fade-exclude = [ ];
+# Исключение фокуса для окон (--focus-exclude)
+#focus-exclude = [ ];
+# Исключение тени для окон (--shadow-exclude)
+#shadow-exclude = [ "name = 'Notification'", "class_g = 'Conky'", "class_g ?= 'Notify-osd'", "class_g = 'Cairo-clock'" ];
+# shadow-exclude = "n:e:Notification";
+# Исключение тени для определенного участка экрана (--shadow-exclude-reg)
+# shadow-exclude-reg = "x10+0+0";
+#####
+# blur-background-exclude = [ "window_type = 'dock'", "window_type = 'desktop'" ];
+# opacity-rule = [ "80:class_g = 'URxvt'" ];
+
+### Быстрые настройки для отдельных типов окон
+wintypes:
+{
+# Подсказки
+  tooltip = { fade = false; shadow = false; opacity = 0.8; focus = true; };
+# Уведомления
+  notify = { shadow = false; opacity = 0.9; focus = false; };
+# Модальные окна
+#  dialog = { shadow = false; focus = true; };
+};
+
