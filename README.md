@@ -1,21 +1,24 @@
 # Useful scripts for Debian #
 All scripts are used in Debian 8.0 ("Jessie") et above
 
-## Description of scripts ##
+## Scripts: ##
 * *deb-configure-apt.sh*  Configure "sources.list" and useful "apt" options;
-* *deb-install-base-system.sh*  Install all basic packages;
-* *deb-install-xorg.sh*  Install base Xorg functionality;
-* *deb-install-xfce.sh*  Install XFCE without annoying dependencies;
-* *deb-install-mixed.sh*  Install "mixed" system: openbox, tint2, spacefm, hsetroot, viewnior, xarchiver;
-* *deb-install-multimedia.sh*  Install multimedia components depending on GTK or QT;
+* *deb-install-base-system.sh*  Install all basic and GUI packages (XFCE, GNOME, KDE) without annoying dependencies;
+* *deb-install-drivers.sh*  Install needed drivers and firmwares;
+* *deb-install-apps.sh*  Install applications, depending on GTK or QT;
 * *deb-collect-garbage.sh*  Remove all unneeded packages;
 
-## Description of configs ##
+## Configs: ##
 * *deb-install-configs.sh*  Install all downloaded config files;
-* *tint2rc*  config for tint2 panel;
-* *mpvrc*  config for mpv media player;
+* *openbox*  window manager;
+* *gxkb*  keyboard indicator;
+* *tint2rc*  panel;
+* *mpvrc*  media player;
+* *comptonrc*  compositing manager;
+* *lilytermrc*  advanced terminal emulator;
 
 ## FAQ ##
-* *What about tasksel & metapackages?*  Yes, you can use it. But main goal of this scripts - pure system without any garabge.
+* *What about tasksel & metapackages?*  Yes, you can use it. But main goal of this scripts - pure system without any garbage.
 * *Some packages missed!*  Look previous question.
+* *Difficult configuration of openbox/liyterm/etc!*  You can change it freely.
 
