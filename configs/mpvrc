@@ -1,0 +1,15 @@
+[default]
+user-agent = "Mozilla/5.0"
+vo = vaapi,xv
+ao = alsa
+hwdec = vaapi
+cache = 8192
+cache-default = 8192
+alang = ru,fr
+slang = ru,fr
+fullscreen = no
+osc = yes
+input-lirc = no
+ontop = no
+stop-screensaver = yes
+
