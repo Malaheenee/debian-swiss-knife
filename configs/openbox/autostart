@@ -1,0 +1,32 @@
+# Autostarted apps | Автоматический запуск приложений
+
+# Screen detection | Определение видеовыходов
+CONNECTED_OUTPUT=$(xrandr -q | grep -iE "\bconnected\b" | cut -d " " -f1)
+if [ "$CONNECTED_OUTPUT" != "LVDS" ]; then
+  CONNECTED_OUTPUT=$(echo $CONNECTED_OUTPUT | sed s/LVDS//)
+  xrandr --output LVDS --off --output $CONNECTED_OUTPUT --auto
+fi
+
+# Desktop color (uncomment if no wallpaper used) | Цвет рабочего стола
+#xsetroot -solid '#2D73B8'
+
+# Desktop wallpaper (set path/to/your/wall) | Обо для рабочего стола
+hsetroot -cover /usr/share/images/debian-wall.png
+
+# Compositing manager | Тени, прозрачность и т.п.
+compton -b --config ${HOME}/my_config/comptonrc &
+
+# Notifications | Всплывающие уведомления
+/usr/lib/notification-daemon/notification-daemon &
+
+# Lightweit panel | Панель
+tint2 &
+
+# Keyboard indicator | Клавиатурный индикатор
+gxkb &
+
+# Sound controls | Регулировка громкости
+volumeicon &
+
+# Run file manager as "Desktop" (uncomment if needed) | Значки на рабочем столе
+# spacefm --desktop &

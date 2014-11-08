@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Эмулятор терминала" icon="/usr/share/icons/Tango/scalable/apps/terminal.svg">
+    <action name="Execute"><execute>x-terminal-emulator</execute></action>
+  </item>
+  <item label="Веб-браузер" icon="/usr/share/icons/Tango/scalable/apps/browser.svg">
+    <action name="Execute"><execute>x-www-browser</execute></action>
+  </item>
+  <item label="Файловый менеджер" icon="/usr/share/icons/Tango/scalable/apps/file-manager.svg">
+    <action name="Execute"><execute>spacefm</execute></action>
+  </item>
+  <item label="Текстовый редактор" icon="/usr/share/icons/Tango/scalable/apps/text-editor.svg">
+    <action name="Execute"><execute>geany</execute></action>
+  </item>
+
+  <separator />
+
+  <menu id="client-list-menu" icon="/usr/share/icons/Tango/scalable/apps/preferences-system-windows.svg"/>
+  
+  <separator />
+
+  <menu id="Internet" label="Интернет" icon="/usr/share/icons/Tango/scalable/categories/applications-internet.svg">
+    <item label="Iceweasel" icon="/usr/share/icons/hicolor/scalable/apps/iceweasel.svg">
+      <action name="Execute"><execute>iceweasel</execute></action>
+    </item>
+    <item label="Gajim" icon="/usr/share/icons/hicolor/scalable/apps/gajim.svg">
+      <action name="Execute"><execute>gajim</execute></action>
+    </item>
+  </menu>
+  
+  <menu id="Graphics" label="Графика" icon="/usr/share/icons/Tango/scalable/categories/applications-graphics.svg">
+    <item label="GIMP">
+      <action name="Execute"><execute>gimp</execute></action>
+    </item>
+    <item label="RawTherapee">
+      <action name="Execute"><execute>rawtherapee</execute></action>
+    </item>
+    <item label="Viewnior" icon="/usr/share/icons/hicolor/scalable/apps/viewnior.svg">
+      <action name="Execute"><execute>viewnior</execute></action>
+    </item>
+  </menu>
+
+  <menu id="Console" label="Консоль" icon="/usr/share/icons/Tango/scalable/categories/applications-system.svg">
+    <item label="LilyTerm">
+      <action name="Execute"><execute>lilyterm</execute></action>
+    </item>
+    <item label="Midnight Commander" icon="/usr/share/icons/hicolor/scalable/apps/mc.svg">
+      <action name="Execute"><execute>lilyterm --join --execute mc</execute></action>
+    </item>
+    <item label="htop">
+      <action name="Execute"><execute>lilyterm --join --execute htop</execute></action>
+    </item>
+  </menu>
+  
+  <menu id="Utilites" label="Утилиты" icon="/usr/share/icons/Tango/scalable/categories/applications-accessories.svg">
+    <item label="Geany" icon="/usr/share/icons/hicolor/scalable/apps/geany.svg">
+      <action name="Execute"><execute>geany</execute></action>
+    </item>
+    <item label="SpaceFM">
+      <action name="Execute"><execute>spacefm</execute></action>
+    </item>
+    <item label="Xarchiver" icon="/usr/share/icons/hicolor/scalable/apps/xarchiver.svg">
+      <action name="Execute"><execute>xarchiver</execute></action>
+    </item>
+    <item label="Galculator" icon="/usr/share/icons/hicolor/scalable/apps/galculator.svg">
+      <action name="Execute"><execute>galculator</execute></action>
+    </item>
+    <item label="SimpleBurn">
+      <action name="Execute"><execute>simpleburn</execute></action>
+    </item>
+    <item label="ReportBug">
+      <action name="Execute"><execute>reportbug</execute></action>
+    </item>
+  </menu>
+
+  <menu id="Hardware" label="Оборудование" icon="/usr/share/icons/Tango/scalable/categories/applications-system.svg">
+    <item label="aRandr" icon="/usr/share/icons/Tango/scalable/devices/display.svg">
+      <action name="Execute"><execute>arandr</execute></action>
+    </item>
+    <item label="gParted" icon="/usr/share/icons/hicolor/scalable/apps/gparted.svg">
+      <action name="Execute"><execute>gparted</execute></action>
+    </item>
+  </menu>
+  
+  <menu id="Office" label="Офис" icon="/usr/share/icons/Tango/scalable/categories/applications-office.svg">
+    <item label="Evince">
+      <action name="Execute"><execute>evince</execute></action>
+    </item>
+    <item label="LibreOffice Writer" icon="/usr/share/icons/hicolor/scalable/apps/libreoffice-writer.svg">
+      <action name="Execute"><execute>loffice --writer</execute></action>
+    </item>
+    <item label="LibreOffice Calc" icon="/usr/share/icons/hicolor/scalable/apps/libreoffice-calc.svg">
+      <action name="Execute"><execute>loffice --calc</execute></action>
+    </item>
+  </menu>
+
+  <menu id="Media" label="Медиа" icon="/usr/share/icons/Tango/scalable/categories/applications-multimedia.svg">
+    <item label="Audacious" icon="/usr/share/icons/hicolor/scalable/apps/audacious.svg">
+      <action name="Execute"><execute>audacious</execute></action>
+    </item>
+  </menu>
+
+  <separator />
+
+  <item label="Reconfigure" icon="/usr/share/icons/Tango/scalable/actions/reload.svg">
+    <action name="Reconfigure" />
+  </item>
+
+  <separator />
+
+  <menu id="Exit" label="Выключение..." icon="/usr/share/icons/Tango/scalable/emblems/emblem-system.svg">
+    <item label="Выйти из системы" icon="/usr/share/icons/Tango/scalable/actions/system-log-out.svg">
+      <action name="Exit">
+        <prompt>yes</prompt>
+      </action>
+    </item>
+    <item label="Перезагрузить">
+      <action name="Execute">
+        <prompt>Вы действительно хотите перезагрузить компьютер?</prompt>
+        <execute>systemctl reboot</execute>
+      </action>
+    </item>
+    <item label="Выключить" icon="/usr/share/icons/Tango/scalable/actions/system-shutdown.svg">
+      <action name="Execute">
+        <prompt>Вы действительно хотите выключить компьютер?</prompt>
+        <execute>systemctl poweroff</execute>
+      </action>
+    </item>
+  </menu>
+
+</menu>
+
+</openbox_menu>

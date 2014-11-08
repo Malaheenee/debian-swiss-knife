@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- OpenBox config -->
+
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- Windows resistance | "Устойчивость" окон по отношению друг к другу и к краям экрана -->
+  <resistance>
+    <strength>10</strength>
+    <screen_edge_strength>20</screen_edge_strength>
+  </resistance>
+
+  <!-- Focus policy | Фокус окон-->
+  <focus>
+    <focusNew>yes</focusNew>
+    <followMouse>no</followMouse>
+    <focusLast>yes</focusLast>
+    <underMouse>no</underMouse>
+    <focusDelay>200</focusDelay>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+
+  <!-- Window placement | Управление положением окон -->
+  <placement>
+    <policy>Smart</policy>
+    <monitor>Primary</monitor>
+    <primaryMonitor>1</primaryMonitor>
+    <center>yes</center>
+  </placement>
+
+  <!-- Theme | Оформление -->
+  <theme>
+    <name>Verseau</name>
+    <titleLayout>NLDIMC</titleLayout>
+    <keepBorder>yes</keepBorder>
+    <animateIconify>yes</animateIconify>
+    <font place="ActiveWindow">
+      <name>Droid Sans</name>
+      <size>9</size>
+      <weight>Bold</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="InactiveWindow">
+      <name>Droid Sans</name>
+      <size>9</size>
+      <weight>Bold</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="MenuHeader">
+      <name>Droid Sans</name>
+      <size>9</size>
+      <weight>normal</weight>
+      <slant>normal</slant>
+    </font>
+    <font place="MenuItem">
+      <name>Droid Sans</name>
+      <size>9</size>
+      <weight>normal</weight>
+      <slant>normal</slant>
+    </font>
+    <font place="ActiveOnScreenDisplay">
+      <name>Droid Sans</name>
+      <size>9</size>
+      <weight>bold</weight>
+      <slant>normal</slant>
+    </font>
+    <font place="InactiveOnScreenDisplay">
+      <name>Droid Sans</name>
+      <size>9</size>
+      <weight>bold</weight>
+      <slant>normal</slant>
+    </font>
+  </theme>
+
+  <!-- Desktops | Рабочие столы-->
+  <desktops>
+    <number>2</number>
+    <firstdesk>1</firstdesk>
+    <names>
+      <name>Work</name>
+      <name>Multimedia</name>
+    </names>
+    <popupTime>875</popupTime>
+  </desktops>
+
+  <!-- Windows resize | Изменение размеров окон -->
+  <resize>
+    <drawContents>yes</drawContents>
+    <popupShow>Nonpixel</popupShow>
+    <popupPosition>Center</popupPosition>
+    <popupFixedPosition>
+      <x>10</x>
+      <y>10</y>
+    </popupFixedPosition>
+  </resize>
+
+  <!-- Desktop margins | Границы рабочего стола -->
+  <margins>
+    <top>0</top>
+    <bottom>0</bottom>
+    <left>0</left>
+    <right>0</right>
+  </margins>
+
+  <!-- Dock settings | Док - некая фиксированная область -->
+  <dock>
+    <position>BottomRight</position>
+    <floatingX>0</floatingX>
+    <floatingY>0</floatingY>
+    <noStrut>no</noStrut>
+    <stacking>Above</stacking>
+    <direction>Horizontal</direction>
+    <autoHide>no</autoHide>
+    <hideDelay>300</hideDelay>
+    <showDelay>300</showDelay>
+    <moveButton>Middle</moveButton>
+  </dock>
+
+  <!-- Keyboard settings | Комбинации клавиш-->
+  <keyboard>
+    <chainQuitKey>C-g</chainQuitKey>
+    <!-- Show main menu | Показать основное меню -->
+    <keybind key="A-F1">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
+    <!-- gmrun | Запуск командной строки -->
+    <keybind key="A-F2">
+      <action name="execute">
+        <execute>gmrun</execute>
+      </action>
+    </keybind>
+    <!-- Show window menu | Показать меню окна -->
+    <keybind key="A-F3">
+      <action name="ShowMenu">
+        <menu>client-menu</menu>
+      </action>
+    </keybind>
+    <!-- Close window | Закрыть окно -->
+    <keybind key="A-F4">
+      <action name="Close"/>
+    </keybind>
+    <!-- Window switching | Переход между окнами -->
+    <keybind key="A-Tab">
+      <action name="NextWindow">
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <!-- Show desktop (like in Windows) | Свернуть/развернуть все окна -->
+    <keybind key="W-d">
+      <action name="ToggleShowDesktop"/>
+    </keybind>
+    <!-- Goto desktop | Перейти на рабочий стол -->
+    <keybind key="W-F1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-F2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <!-- Run web-browser | Запуск веб-браузера -->
+    <keybind key="W-b">
+      <action name="execute">
+        <execute>iceweasel</execute>
+      </action>
+    </keybind>
+    <!-- Run text editor | Запуск текстового редактора -->
+    <keybind key="W-e">
+      <action name="execute">
+        <execute>geany</execute>
+      </action>
+    </keybind>
+    <!-- Run file manager | Запуск файлового менеджера -->
+    <keybind key="W-f">
+      <action name="execute">
+        <execute>spacefm</execute>
+      </action>
+    </keybind>
+    <!-- Run terminal emulator | Запуск эмулятора терминала -->
+    <keybind key="W-t">
+      <action name="execute">
+        <execute>lilyterm</execute>
+      </action>
+    </keybind>
+    <!-- Run system monitor | Запуск системного монитора -->
+    <keybind key="W-h">
+      <action name="execute">
+        <execute>lilyterm --join --execute htop</execute>
+      </action>
+    </keybind>
+    <!-- Run audioplayer | Запуск аудиоплеера -->
+    <keybind key="W-a">
+      <action name="execute">
+        <execute>audacious</execute>
+      </action>
+    </keybind>
+    <!-- Run calculator | Запуск калькулятора -->
+    <keybind key="W-с">
+      <action name="execute">
+        <execute>galculator</execute>
+      </action>
+    </keybind>
+    <!-- Window screenshot | Снимок окна -->
+    <keybind key="C-Print">
+      <action name="Execute">
+        <command>scrot -uzb -e 'mv $f ~/Images/'</command>
+      </action>
+    </keybind>
+    <!-- Desktop screenshot | Снимок экрана -->
+    <keybind key="Print">
+      <action name="Execute">
+        <command>scrot -z -e 'mv $f ~/Images/'</command>
+      </action>
+    </keybind>
+  </keyboard>
+
+  <!-- Mouse settings | Настройка мыши -->
+  <mouse>
+    <dragThreshold>10</dragThreshold>
+    <doubleClickTime>500</doubleClickTime>
+    <screenEdgeWarpTime>400</screenEdgeWarpTime>
+    <!-- Time before changing desktops when the pointer touches the edge of the
+       screen while moving a window, in milliseconds (1000 = 1 second).
+       Set this to 0 to disable warping -->
+    <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
+    <!-- Set this to TRUE to move the mouse pointer across the desktop when
+       switching due to hitting the edge of the screen -->
+
+    <!-- Mouse behavoir depends on pointer position | Поведение мыши зависит от позиции указателя -->
+    <!-- Window frame | Рамка окна -->
+    <context name="Frame">
+    <mousebind button="W-Left" action="Drag">
+      <action name="Move"/>
+    </mousebind>
+    </context>
+    <!-- Window titlebar | Заголовок окна -->
+    <context name="Titlebar">
+      <mousebind button="Left" action="Drag">
+        <action name="if">
+          <maximized>no</maximized>
+          <then>
+            <action name="Move"/>
+          </then>
+          <else>
+            <action name="Unmaximize"/>
+            <action name="Move"/>
+          </else>
+        </action>
+      </mousebind>
+      <mousebind button="Left" action="DoubleClick">
+        <action name="ToggleMaximize"/>
+      </mousebind>
+      <mousebind button="Up" action="Click">
+        <action name="if">
+          <shaded>no</shaded>
+          <then>
+            <action name="Shade"/>
+            <action name="FocusToBottom"/>
+            <action name="Unfocus"/>
+            <action name="Lower"/>
+          </then>
+        </action>
+      </mousebind>
+      <mousebind button="Down" action="Click">
+        <action name="if">
+          <shaded>yes</shaded>
+          <then>
+            <action name="Unshade"/>
+            <action name="Raise"/>
+          </then>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Window titebar and frame | Заголовок и края окна -->
+    <context name="Titlebar Top Right Bottom Left TLCorner TRCorner BRCorner BLCorner">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </mousebind>
+      <mousebind button="Middle" action="Press">
+        <action name="Lower"/>
+        <action name="FocusToBottom"/>
+        <action name="Unfocus"/>
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="ShowMenu">
+          <menu>client-menu</menu>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Window top | Верхняя часть окна -->
+    <context name="Top">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize">
+          <edge>top</edge>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Window left side | Левая часть окна -->
+    <context name="Left">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize">
+          <edge>left</edge>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Widnows right size | Правая часть окна -->
+    <context name="Right">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize">
+          <edge>right</edge>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Window bootm | Нижняя часть окна -->
+    <context name="Bottom">
+      <mousebind button="Left" action="Drag">
+        <action name="Resize">
+          <edge>bottom</edge>
+        </action>
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="ShowMenu">
+          <menu>client-menu</menu>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Window corners | Углы окна -->
+    <context name="TRCorner BRCorner TLCorner BLCorner">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </mousebind>
+      <mousebind button="Left" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+    </context>
+    <!-- ??? -->
+    <context name="Client">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="Middle" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+    </context>
+    <!-- Icon app in titlebar | Иконка приложения в заголовке окна -->
+    <context name="Icon">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+        <action name="ShowMenu">
+          <menu>client-menu</menu>
+        </action>
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="ShowMenu">
+          <menu>client-menu</menu>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Window shading | При сворачивании окна в заголовок -->
+    <context name="Shade">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="Left" action="Click">
+        <action name="ToggleShade"/>
+      </mousebind>
+    </context>
+    <!-- Iconify window | При сворачивании окна -->
+    <context name="Iconify">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="Left" action="Click">
+        <action name="Iconify"/>
+      </mousebind>
+    </context>
+    <!-- Maximize window | При разворачивании окна -->
+    <context name="Maximize">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </mousebind>
+      <mousebind button="Middle" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </mousebind>
+      <mousebind button="Left" action="Click">
+        <action name="ToggleMaximize"/>
+      </mousebind>
+      <mousebind button="Middle" action="Click">
+        <action name="ToggleMaximize">
+          <direction>vertical</direction>
+        </action>
+      </mousebind>
+      <mousebind button="Right" action="Click">
+        <action name="ToggleMaximize">
+          <direction>horizontal</direction>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Close window | При закрытии окна -->
+    <context name="Close">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </mousebind>
+      <mousebind button="Left" action="Click">
+        <action name="Close"/>
+      </mousebind>
+    </context>
+    <!-- On desktop | На рабочем столе -->
+    <context name="Desktop">
+      <mousebind button="Up" action="Click">
+        <action name="GoToDesktop">
+          <to>previous</to>
+        </action>
+      </mousebind>
+      <mousebind button="Down" action="Click">
+        <action name="GoToDesktop">
+          <to>next</to>
+        </action>
+      </mousebind>
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+      </mousebind>
+    </context>
+    <!-- ??? -->
+    <context name="AllDesktops">
+      <mousebind button="Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="Unshade"/>
+      </mousebind>
+      <mousebind button="Left" action="Click">
+        <action name="ToggleOmnipresent"/>
+      </mousebind>
+    </context>
+    <!-- Show menu on desktop | Для вызова меню на рабочем столе -->
+    <context name="Root">
+      <mousebind button="Middle" action="Press">
+        <action name="ShowMenu">
+          <menu>client-list-combined-menu</menu>
+        </action>
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu">
+          <menu>root-menu</menu>
+        </action>
+      </mousebind>
+    </context>
+    <!-- Resize and move window | При изменении размеров и перемещении окна -->
+    <context name="MoveResize">
+      <mousebind button="Up" action="Click">
+        <action name="GoToDesktop">
+          <to>previous</to>
+        </action>
+      </mousebind>
+      <mousebind button="Down" action="Click">
+        <action name="GoToDesktop">
+          <to>next</to>
+        </action>
+      </mousebind>
+    </context>
+
+  </mouse>
+
+  <!-- Menu | Настройки меню -->
+  <menu>
+    <file>menu.xml</file>
+    <hideDelay>200</hideDelay>
+    <middle>no</middle>
+    <submenuShowDelay>100</submenuShowDelay>
+    <submenuHideDelay>400</submenuHideDelay>
+    <showIcons>yes</showIcons>
+    <manageDesktops>no</manageDesktops>
+  </menu>
+
+  <!-- Special apps settings | Настройки для отдельных приложений -->
+  <applications>
+    <!-- Audacious -->
+    <application name="audacious" class="Audacious" type="normal">
+      <desktop>2</desktop>
+      <iconic>no</iconic>
+      <focus>no</focus>
+    </application>
+    <!-- Gmrun -->
+    <application name="gmrun" class="Gmrun">
+      <desktop>all</desktop>
+      <iconic>no</iconic>
+      <skip_taskbar>yes</skip_taskbar>
+      <focus>yes</focus>
+    </application>
+    <!-- mpv -->
+    <application class="mpv">
+      <desktop>2</desktop>
+      <iconic>no</iconic>
+      <focus>yes</focus>
+    </application>
+  </applications>
+  
+</openbox_config>
