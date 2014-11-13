@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# This script installs Install all basic and GUI packages (XFCE, GNOME, KDE)
-# without annoying dependencies;
+# This script installs all basic and GUI packages (XFCE, GNOME, KDE)
+# without annoying dependencies.
 
 # Common vars
 ROOT_UID=0
@@ -34,8 +34,10 @@ is_apt_configured() {
         if [ -n "$(grep -oE "^deb\W*(h|f)tt?p.*main\W*contrib\W*non-free$" ${APT_SOURCES_FILE})" ]; then
             echo -n "Updating packages list... "
             eval ${APT_PROGRAM} ${APT_COMMAND} ${APT_OPTIONS}
-            echo "Done."
-            return 0
+            case ${?} in
+                "0" ) echo ${?} "Done."; return 0;;
+                "100" ) echo ${?} "Incorrect settings of apt!"; exit 1 ;;
+            esac
         else
             echo "You need to configure apt first."
             exit 1
@@ -48,8 +50,9 @@ is_apt_configured() {
 
 # Select packages for installation
 user_selection() {
-    read -p "What you want to install first: [b]ase system, [k]de, [x]fce, [m]ixed (default \"mixed\"): " response
-    case ${response} in
+    echo "This script installs all basic and GUI packages without annoying dependencies."
+    read -p "What you want to install first: [b]ase system, [k]de, [x]fce, [m]ixed (default \"mixed\"): "
+    case ${REPLY} in
         B|b ) PKG_SELECT+="base" ;;
         K|k ) PKG_SELECT+="base kde" ;;
         M|m|"" ) PKG_SELECT+="base mixed" ;;
@@ -58,8 +61,8 @@ user_selection() {
     esac
 
     if [[ ${PKG_SELECT} =~ "kde" ]]; then
-        read -p "What display manager you want to use: [l]ightdm or [k]dm, (default \"lightdm\"): " response
-        case ${response} in
+        read -p "What display manager you want to use: [l]ightdm or [k]dm, (default \"lightdm\"): "
+        case ${REPLY} in
             K|k* ) PKG_SELECT+=" kdm" ;;
             L|l*|"" ) PKG_SELECT+=" lightdm" ;;
             [^KkLl]* ) echo "Wrong selection. Aborted."; exit 1 ;;
@@ -125,17 +128,21 @@ set_pkgs_list() {
 
 # Install packages
 proceed_to_install() {
-    read -p "You proceed to install \"${PKG_SELECT}\". Do you want to continue? [Y]es, [N]o (default \"yes\"): " response
-    case ${response} in
-        [Yy]*|"" ) 
+    read -p "You proceed to install \"${PKG_SELECT}\". Do you want to continue? [Y|n]: "
+    case ${REPLY} in
+        [Y|y*|"" ) 
             is_apt_configured
             echo -n "Installation of packages... "
             eval ${APT_PROGRAM} ${APT_COMMAND} ${APT_OPTIONS} ${APT_PACKAGES}
             echo "Done."
             exit 0
         ;;
-        [Nn]* )
+        N|n* )
             echo "Installaton aborted by user."
+            exit 1
+        ;;
+        [^YyNn]* )
+            echo "Wrong selection. Aborted."
             exit 1
         ;;
     esac
