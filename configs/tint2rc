@@ -32,8 +32,8 @@ border_color = #FFFFFF 48
 panel_background_id = 1
 panel_monitor = all
 panel_position = bottom center horizontal
-panel_size = 100% 27
-panel_margin = 0 0
+panel_size = 99% 27
+panel_margin = 0 1
 panel_padding = 0 0 0
 panel_dock = 0
 panel_layer = top
@@ -41,7 +41,7 @@ panel_items = LTSBC
 font_shadow = 0
 strut_policy = follow_size
 wm_menu = 1
-#panel_dock = 0
+panel_dock = 0
 
 # Автоскрытие панели
 autohide = 0
@@ -122,8 +122,8 @@ battery_background_id = 0
 battery_low_status = 12
 battery_low_cmd = notify-send "Батарея садится!"
 battery_hide = never
-bat1_font = Droid Sans 9
-bat2_font = Droid Sans 7
+bat1_font = Droid Sans Bold 9
+bat2_font = Droid Sans Bold 7
 battery_font_color = #333333 100
 battery_padding = 3 1
 
