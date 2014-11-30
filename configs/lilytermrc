@@ -116,12 +116,12 @@ window_resize_ratio = 1.120
 word_chars = -A-Za-z0-9_.+!@&=/~%
 
 # The lines of scrollback history. -1 means unlimited (vte >= 0.22.3).
-scrollback_lines = 1024
+scrollback_lines = 2048
 
 # Shows scroll_bar or not.
 # 0: Never shows the scroll_bar; 1: Always shows the scroll_bar.
 # Left it blank: Hide when fullscreen, or scrollback_lines = 0.
-show_scroll_bar =
+show_scroll_bar = 1
 
 # The position of scroll_bar.
 # 0: scroll_bar is on left; 1: scroll_bar is on right.
@@ -186,7 +186,7 @@ default_locale = fr_CA.UTF-8
 # You may use "ja_JP", "ja_JP.EUC-JP", or "ja_JP.UTF-8" here.
 # You may want to use "UTF-8" here if you have no locale data installed.
 # Left it blank will disable locale and encoding select menu items.
-locales_list = UTF-8
+locales_list = UTF-8 ru_RU.UTF-8
 
 # Sets what type of terminal attempts to emulate.
 # It will also set the TERM environment.
