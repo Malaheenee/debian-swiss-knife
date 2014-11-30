@@ -1,10 +1,11 @@
+# Конфигурация для видеоплеера mpv
 [default]
 user-agent = "Mozilla/5.0"
-vo = vaapi,xv
+vo = vdpau,vaapi,xv
 ao = alsa
-hwdec = vaapi
-cache = 8192
-cache-default = 8192
+hwdec = auto
+cache = 16384
+cache-default = 16384
 alang = ru,fr
 slang = ru,fr
 fullscreen = no
