@@ -7,10 +7,6 @@ ROOT_UID=0
 E_NOTROOT=101
 
 # APT vars
-APT_PROGRAM="apt-get"
-APT_COMMAND="install"
-APT_OPTIONS="-qqys"
-APT_PACKAGES=""
 APT_SOURCES_FILE="/etc/apt/sources.list"
 APT_CONF_FILE="/etc/apt/apt.conf.d/02apt-local"
 
@@ -66,9 +62,9 @@ user_selection() {
         fi
     fi
 
-    read -p "Enter mirror's URL that you want to use (default \"ftp.debian.org\"): "
+    read -p "Enter mirror's URL that you want to use (default \"http://ftp.debian.org\"): "
     echo ${REPLY}
-    read -p "Which release you want to use as default? [s]table, [t]esting, [u]nstable: "
+    read -p "Which release you want to use? [s]table, [t]esting, [u]nstable (default \"t\"): "
     echo ${REPLY}
     read -p "Do you want to include in sources.list all branches? [y|N]: "
     echo ${REPLY}
