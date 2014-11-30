@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script configure "sources.list" and some useful "apt" options
 
@@ -62,7 +62,7 @@ user_selection() {
         fi
     fi
 
-    read -p "Enter mirror's URL that you want to use (default \"http://ftp.debian.org\"): "
+    read -p "Enter mirror's URL that you want to use (default \"${REPO_URL}\"): "
     echo ${REPLY}
     read -p "Which release you want to use? [s]table, [t]esting, [u]nstable (default \"t\"): "
     echo ${REPLY}

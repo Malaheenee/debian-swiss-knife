@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script installs all basic and GUI packages (XFCE, GNOME, KDE)
 # without annoying dependencies.
@@ -10,7 +10,7 @@ E_NOTROOT=101
 # APT vars
 APT_PROGRAM="apt-get"
 APT_COMMAND="install"
-APT_OPTIONS="-qqy"
+APT_OPTIONS="-qy"
 APT_PACKAGES=""
 APT_SOURCES_FILE="/etc/apt/sources.list"
 PKG_SELECT=""
@@ -83,7 +83,7 @@ set_pkgs_list() {
     
     if [ -n "${2}" ]; then
         APT_PACKAGES+=" xfonts-base xfonts-scalable xserver-common xinit \
-        xserver-xorg-video-fbdev xserver-xorg-video-vesa \
+        xserver-xorg xserver-xorg-video-fbdev xserver-xorg-video-vesa \
         xserver-xorg-input-evdev libnotify-bin xdg-utils xdg-user-dirs \
         cups-bsd lsb-release tango-icon-theme dmz-cursor-theme"
 
