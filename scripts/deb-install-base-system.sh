@@ -60,15 +60,13 @@ user_selection() {
         [^BbKkMmXx]* ) echo "Wrong selection. Aborted."; exit 1 ;;
     esac
 
-    if [[ ${PKG_SELECT} =~ "kde" ]]; then
-        read -p "What display manager you want to use: [l]ightdm or [k]dm, (default \"lightdm\"): "
+    if [[ ${PKG_SELECT} != "base" ]]; then
+        read -p "What display manager you want to use: [l]ightdm or [k]dm (default \"lightdm\"): "
         case ${REPLY} in
-            K|k* ) PKG_SELECT+=" kdm" ;;
-            L|l*|"" ) PKG_SELECT+=" lightdm" ;;
+            K|k ) PKG_SELECT+=" kdm" ;;
+            L|l|"" ) PKG_SELECT+=" lightdm" ;;
             [^KkLl]* ) echo "Wrong selection. Aborted."; exit 1 ;;
         esac
-    elif [[ ${PKG_SELECT} =~ xfce|mixed ]]; then
-        PKG_SELECT+=" lightdm"
     fi
     set_pkgs_list ${PKG_SELECT}
 }
@@ -79,13 +77,16 @@ set_pkgs_list() {
         APT_PACKAGES+=" bash-completion alsa-utils dbus ntfs-3g \
         dosfstools mtools mlocate intel-microcode bzip2 zip unzip p7zip-full \
         xz-utils libiso9660-8 unrar policykit-1 acpi-support"
+    else
+        echo "Nothing to do. Aborted."
+        exit 1
     fi
-    
+
     if [ -n "${2}" ]; then
         APT_PACKAGES+=" xfonts-base xfonts-scalable xserver-common xinit \
         xserver-xorg xserver-xorg-video-fbdev xserver-xorg-video-vesa \
         xserver-xorg-input-evdev libnotify-bin xdg-utils xdg-user-dirs \
-        cups-bsd lsb-release tango-icon-theme dmz-cursor-theme"
+        cups-bsd lsb-release tango-icon-theme dmz-cursor-theme xclip"
 
         case ${2} in
             xfce ) 
@@ -130,14 +131,14 @@ set_pkgs_list() {
 proceed_to_install() {
     read -p "You proceed to install \"${PKG_SELECT}\". Do you want to continue? [Y|n]: "
     case ${REPLY} in
-        [Y|y*|"" ) 
+        Y|y|"" )
             is_apt_configured
             echo -n "Installation of packages... "
             eval ${APT_PROGRAM} ${APT_COMMAND} ${APT_OPTIONS} ${APT_PACKAGES}
             echo "Done."
             exit 0
         ;;
-        N|n* )
+        N|n )
             echo "Installaton aborted by user."
             exit 1
         ;;
