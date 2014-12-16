@@ -8,7 +8,7 @@ E_NOTROOT=101
 
 # APT vars
 APT_SOURCES_FILE="/etc/apt/sources.list"
-APT_CONF_FILE="/etc/apt/apt.conf.d/02apt-local"
+APT_CONF_FILE="/etc/apt/apt.conf.d/20apt-local"
 
 # Other vars
 REPO_LIST="stable testing unstable experimental"
@@ -34,7 +34,7 @@ configure_apt() {
     fi
     
     for i in ${REPO_LIST}; do
-        echo "deb ${REPO_URL}/debian $i main contrib non-free" >> ${APT_SOURCES_FILE}
+        echo "deb ${REPO_URL}/debian/ $i main contrib non-free" >> ${APT_SOURCES_FILE}
     done
     
     if [ ! -e ${APT_CONF_FILE} ]; then
@@ -49,26 +49,51 @@ configure_apt() {
 }
 
 user_selection() {
-    echo "This script configure oyr sources.list and some useful apt options."
+    echo "This script configure your sources.list and some useful \"apt\" options."
 
     if [ -e ${APT_SOURCES_FILE} ]; then
         if [ -n "$(grep -oE "^deb\W*(h|f)tt?p.*main\W*contrib\W*non-free$" ${APT_SOURCES_FILE})" ]; then
             read -p "Seems that apt is already configured. Do you want to continue? [y|N] "
             case ${REPLY} in
-                N|n*|"" ) exit 0 ;;
-                Y|y* ) sed -i "s/^deb/# deb/g" ${APT_SOURCES_FILE} ;;
+                N|n|"" ) exit 0 ;;
+                Y|y ) sed -i "s/^deb/# deb/g" ${APT_SOURCES_FILE} ;;
                 [^YyNn]* ) echo "Wrong selection. Aborted."; exit 1 ;;
             esac
         fi
     fi
 
     read -p "Enter mirror's URL that you want to use (default \"${REPO_URL}\"): "
-    echo ${REPLY}
+    case ${REPLY} in
+        "" ) REPO_URL="http://ftp.debian.org" ;;
+        [A-Za-z]* )
+            if [[ ${REPLY:0:5} == "http:" ]] ||
+               [[ ${REPLY:0:5} == "file:" ]] ||
+               [[ ${REPLY:0:5} == "ftp:/" ]]; then
+                REPO_URL=${REPLY}
+            else
+                echo "Wrong URL: ${REPLY}. Aborted."
+                exit 1
+            fi
+        ;;
+    esac
+
     read -p "Which release you want to use? [s]table, [t]esting, [u]nstable (default \"t\"): "
-    echo ${REPLY}
+    case ${REPLY} in
+        T|t|"" ) DEFAULT_RELEASE="testing" ;;
+        S|s ) DEFAULT_RELEASE="stable" ;;
+        U|u ) DEFAULT_RELEASE="unstable" ;;
+        [^SsTtUu]* ) echo "Wrong selection. Aborted."; exit 1 ;;
+    esac
+
     read -p "Do you want to include in sources.list all branches? [y|N]: "
-    echo ${REPLY}
+    case ${REPLY} in
+        N|n|"" ) REPO_LIST=${DEFAULT_RELEASE} ;;
+        Y|y ) REPO_LIST="stable testing unstable experimental" ;;
+        [^YyNn]* ) echo "Wrong selection. Aborted."; exit 1 ;;
+    esac
+
+    configure_apt
 }
 
-#runs_as_root
+runs_as_root
 user_selection
