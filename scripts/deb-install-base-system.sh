@@ -68,62 +68,50 @@ user_selection() {
             [^KkLl]* ) echo "Wrong selection. Aborted."; exit 1 ;;
         esac
     fi
-    set_pkgs_list ${PKG_SELECT}
-}
 
-# Set list of needed packages
-set_pkgs_list() {
-    if [ ${1} == "base" ]; then
+    if [[ ${PKG_SELECT} =~ "base" ]]; then
         APT_PACKAGES+=" bash-completion alsa-utils dbus ntfs-3g \
         dosfstools mtools mlocate intel-microcode bzip2 zip unzip p7zip-full \
         xz-utils libiso9660-8 unrar policykit-1 acpi-support"
-    else
-        echo "Nothing to do. Aborted."
-        exit 1
     fi
 
-    if [ -n "${2}" ]; then
+    if [[ ${PKG_SELECT} =~ "xfce"|"kde"|"mixed" ]]; then
         APT_PACKAGES+=" xfonts-base xfonts-scalable xserver-common xinit \
         xserver-xorg xserver-xorg-video-fbdev xserver-xorg-video-vesa \
         xserver-xorg-input-evdev libnotify-bin xdg-utils xdg-user-dirs \
         cups-bsd lsb-release tango-icon-theme dmz-cursor-theme xclip"
+    fi
 
-        case ${2} in
-            xfce ) 
-                APT_PACKAGES+=" xfce4-panel xfwm4 xfce4-settings xfce4-session \
-                xfdesktop4 xfconf xfce4-notifyd ristretto tumbler xarchiver \
-                mousepad xfce4-mixer xfce4-volumed thunar thunar-volman \
-                thunar-archive-plugin xfce4-xkb-plugin xfce4-screenshooter \
-                xfce4-power-manager gtk2-engines-xfce gtk3-engines-xfce \
-                xfce4-terminal xfwm4-themes orage xfce4-appfinder xfce4-places-plugin \
-                xfce4-weather-plugin libxfce4ui-utils galculator"
-            ;;
-            kde ) 
-                APT_PACKAGES+=" dolphin kde-l10n-ru kde-window-manager \
-                kde-baseapps-bin kde-workspace-bin polkit-kde-1 oxygencursors \
-                oxygen-icon-theme plasma-widgets-workspace plasma-containments-addons \
-                libkdesu5 kdesudo kde-runtime gwenview systemsettings konsole \
-                kate kmix ark kwalletmanager kfind phonon-backend-gstreamer \
-                ksysguard ksnapshot akonadi-backend-sqlite sqlite3 kcalc"
-            ;;
-            mixed ) 
-                APT_PACKAGES+=" openbox hsetroot gmrun gsimplecal arandr \
-                notification-daemon tint2 gxkb volumeicon-alsa compton spacefm \
-                udevil lilyterm viewnior xarchiver galculator geany scrot"
-            ;;
-        esac
+    if [[ ${PKG_SELECT} =~ "xfce" ]]; then
+        APT_PACKAGES+=" xfce4-panel xfwm4 xfce4-settings xfce4-session \
+        xfdesktop4 xfconf xfce4-notifyd ristretto tumbler xarchiver \
+        mousepad xfce4-mixer xfce4-volumed thunar thunar-volman \
+        thunar-archive-plugin xfce4-xkb-plugin xfce4-screenshooter \
+        xfce4-power-manager gtk2-engines-xfce gtk3-engines-xfce \
+        xfce4-terminal xfwm4-themes orage xfce4-appfinder xfce4-places-plugin \
+        xfce4-weather-plugin libxfce4ui-utils galculator"
+    elif [[ ${PKG_SELECT} =~ "kde" ]]; then
+        APT_PACKAGES+=" dolphin kde-l10n-ru kde-window-manager \
+        kde-baseapps-bin kde-workspace-bin polkit-kde-1 oxygencursors \
+        oxygen-icon-theme plasma-widgets-workspace plasma-containments-addons \
+        libkdesu5 kdesudo kde-runtime gwenview systemsettings konsole \
+        kate kmix ark kwalletmanager kfind phonon-backend-gstreamer \
+        ksysguard ksnapshot akonadi-backend-sqlite sqlite3 kcalc"
+    elif [[ ${PKG_SELECT} =~ "mixed" ]]; then
+        APT_PACKAGES+=" openbox hsetroot gmrun gsimplecal arandr \
+        notification-daemon tint2 gxkb volumeicon-alsa compton spacefm \
+        udevil lilyterm viewnior xarchiver galculator geany scrot"
+    fi
 
-        case ${3} in
-            lightdm )
-                APT_PACKAGES+=" lightdm"
-                if [ ${2} == "kde" ]; then
-                    APT_PACKAGES+=" lightdm-kde-greeter"
-                else
-                    APT_PACKAGES+=" lightdm-gtk-greeter"
-                fi
-            ;;
-            kdm ) APT_PACKAGES+=" kdm" ;;
-        esac
+    if [[ ${PKG_SELECT} =~ "lightdm" ]]; then
+        APT_PACKAGES+=" lightdm"
+        if [[ ${PKG_SELECT} =~ "kde" ]]; then
+            APT_PACKAGES+=" lightdm-kde-greeter"
+        else
+            APT_PACKAGES+=" lightdm-gtk-greeter"
+        fi
+    elif [[ ${PKG_SELECT} =~ "kdm" ]]; then
+        APT_PACKAGES+=" kdm"
     fi
 }
 
