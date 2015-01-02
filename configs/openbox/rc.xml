@@ -10,7 +10,7 @@
     <screen_edge_strength>20</screen_edge_strength>
   </resistance>
 
-  <!-- Focus policy | Фокус окон-->
+  <!-- Focus policy | Фокус окон -->
   <focus>
     <focusNew>yes</focusNew>
     <followMouse>no</followMouse>
@@ -127,8 +127,8 @@
     </keybind>
     <!-- gmrun | Запуск командной строки -->
     <keybind key="A-F2">
-      <action name="execute">
-        <execute>gmrun</execute>
+      <action name="Execute">
+        <command>gmrun</command>
       </action>
     </keybind>
     <!-- Show window menu | Показать меню окна -->
@@ -168,44 +168,44 @@
     </keybind>
     <!-- Run web-browser | Запуск веб-браузера -->
     <keybind key="W-b">
-      <action name="execute">
-        <execute>iceweasel</execute>
+      <action name="Execute">
+        <command>iceweasel</command>
       </action>
     </keybind>
     <!-- Run text editor | Запуск текстового редактора -->
     <keybind key="W-e">
-      <action name="execute">
-        <execute>geany</execute>
+      <action name="Execute">
+        <command>geany</command>
       </action>
     </keybind>
     <!-- Run file manager | Запуск файлового менеджера -->
     <keybind key="W-f">
-      <action name="execute">
-        <execute>spacefm</execute>
+      <action name="Execute">
+        <command>spacefm</command>
       </action>
     </keybind>
     <!-- Run terminal emulator | Запуск эмулятора терминала -->
     <keybind key="W-t">
-      <action name="execute">
-        <execute>lilyterm</execute>
+      <action name="Execute">
+        <command>lilyterm</command>
       </action>
     </keybind>
     <!-- Run system monitor | Запуск системного монитора -->
     <keybind key="W-h">
-      <action name="execute">
-        <execute>lilyterm --join --execute htop</execute>
+      <action name="Execute">
+        <command>lilyterm --join --execute htop</command>
       </action>
     </keybind>
     <!-- Run audioplayer | Запуск аудиоплеера -->
     <keybind key="W-a">
-      <action name="execute">
-        <execute>audacious</execute>
+      <action name="Execute">
+        <command>audacious</command>
       </action>
     </keybind>
     <!-- Run calculator | Запуск калькулятора -->
     <keybind key="W-с">
-      <action name="execute">
-        <execute>galculator</execute>
+      <action name="Execute">
+        <command>galculator</command>
       </action>
     </keybind>
     <!-- Window screenshot | Снимок окна -->
@@ -505,7 +505,7 @@
 
   </mouse>
 
-  <!-- Menu | Настройки меню -->
+  <!-- Base menu settings | Настройки меню -->
   <menu>
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
@@ -516,7 +516,7 @@
     <manageDesktops>no</manageDesktops>
   </menu>
 
-  <!-- Special apps settings | Настройки для отдельных приложений -->
+  <!-- Per-apps settings | Настройки для отдельных приложений -->
   <applications>
     <!-- Audacious -->
     <application name="audacious" class="Audacious" type="normal">
