@@ -50,6 +50,9 @@
     <item label="Viewnior">
       <action name="Execute"><command>viewnior</command></action>
     </item>
+    <item label="LibreOffice Draw">
+      <action name="Execute"><command>loffice --draw</command></action>
+    </item>
   </menu>
 
   <menu id="Console" label="Консоль">
@@ -103,6 +106,9 @@
     </item>
     <item label="LibreOffice Calc">
       <action name="Execute"><command>loffice --calc</command></action>
+    </item>
+    <item label="LibreOffice Impress">
+      <action name="Execute"><command>loffice --impress</command></action>
     </item>
   </menu>
 
