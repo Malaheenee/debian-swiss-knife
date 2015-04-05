@@ -12,6 +12,9 @@
   <item label="Веб-браузер">
     <action name="Execute"><command>x-www-browser</command></action>
   </item>
+  <item label="Электронная почта">
+    <action name="Execute"><command>sylpheed</command></action>
+  </item>
   <item label="Файловый менеджер">
     <action name="Execute"><command>spacefm</command></action>
   </item>
@@ -31,6 +34,9 @@
     </item>
     <item label="Gajim">
       <action name="Execute"><command>gajim</command></action>
+    </item>
+    <item label="Sylpheed">
+      <action name="Execute"><command>sylpheed</command></action>
     </item>
   </menu>
   
