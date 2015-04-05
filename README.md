@@ -10,8 +10,9 @@ All scripts are used in Debian 8.0 ("Jessie") et above
 
 ## Configs: ##
 * *deb-install-configs.sh*  Install all downloaded config files;
-* *openbox*  window manager;
-* *gxkb*  keyboard indicator;
+* *openbox* folder  window manager;
+* *gxkb* folder  keyboard indicator;
+* *gtk* folder  gtk-apps settings;
 * *tint2rc*  panel;
 * *mpvrc*  media player;
 * *comptonrc*  compositing manager;
