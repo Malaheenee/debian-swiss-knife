@@ -203,7 +203,7 @@
       </action>
     </keybind>
     <!-- Run calculator | Запуск калькулятора -->
-    <keybind key="W-с">
+    <keybind key="W-c">
       <action name="Execute">
         <command>galculator</command>
       </action>
