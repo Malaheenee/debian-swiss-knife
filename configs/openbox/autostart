@@ -1,10 +1,11 @@
 # Autostarted apps | Автоматический запуск приложений
 
 # Screen detection | Определение видеовыходов
+LVDS="LVDS1"
 CONNECTED_OUTPUT=$(xrandr -q | grep -iE "\bconnected\b" | cut -d " " -f1)
-if [ "$CONNECTED_OUTPUT" != "LVDS" ]; then
-  CONNECTED_OUTPUT=$(echo $CONNECTED_OUTPUT | sed s/LVDS//)
-  xrandr --output LVDS --off --output $CONNECTED_OUTPUT --auto
+if [ "$CONNECTED_OUTPUT" != "$LVDS" ]; then
+  CONNECTED_OUTPUT=$(echo $CONNECTED_OUTPUT | sed s/$LVDS//)
+  xrandr --output $LVDS --off --output $CONNECTED_OUTPUT --auto
 fi
 
 # Desktop color (uncomment if no wallpaper used) | Цвет рабочего стола
