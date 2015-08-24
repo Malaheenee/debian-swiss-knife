@@ -79,7 +79,7 @@ user_selection() {
         APT_PACKAGES+=" xfonts-base xfonts-scalable xserver-common xinit \
         xserver-xorg xserver-xorg-video-fbdev xserver-xorg-video-vesa \
         xserver-xorg-input-evdev libnotify-bin xdg-utils xdg-user-dirs \
-        cups-bsd lsb-release tango-icon-theme dmz-cursor-theme xclip"
+        cups-bsd tango-icon-theme dmz-cursor-theme xclip"
     fi
 
     if [[ ${PKG_SELECT} =~ "xfce" ]]; then
