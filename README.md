@@ -23,3 +23,6 @@ All scripts are used in Debian 8.0 ("Jessie") et above
 * *Some packages missed!* -- Look previous question.
 * *Difficult configuration of openbox/liyterm/etc!* -- You can change it freely.
 
+## Thanks ##
+Different fixes found at:
+1. http://bbs.archbang.org/viewtopic.php?id=4908 (gtk3 shadows)
