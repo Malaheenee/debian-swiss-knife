@@ -50,11 +50,11 @@ no-dnd-shadow = true;
 # Тень на окнах доков/панелей (-C)
 no-dock-shadow = true;
 # Радиус тени (-r)
-shadow-radius = 10;
+shadow-radius = 5;
 # Смещение тени слева (-l)
-shadow-offset-x = -4;
+shadow-offset-x = -5;
 # Смещение тени сверху (-t)
-shadow-offset-y = -4;
+shadow-offset-y = -5;
 # Непрозрачность теней (-o)
 shadow-opacity = 0.7;
 # Значение красного цвета тени (--shadow-red)
