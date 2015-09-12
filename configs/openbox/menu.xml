@@ -113,8 +113,14 @@
   </menu>
 
   <menu id="Media" label="Медиа">
-    <item label="Audacious">
-      <action name="Execute"><command>audacious</command></action>
+    <item label="Радио POLSKASTACJA">
+      <action name="Execute"><command>lilyterm --join --execute mpv "http://fm.kiwi.kz:80/radio80italodisco"</command></action>
+    </item>
+    <item label="Файл из буфера обмена">
+      <action name="Execute"><command>lilyterm --join --execute bash -c "mpv \"$(xclip -out -selection clipboard)\""</command></action>
+    </item>
+    <item label="Воспроизвести Audio CD">
+      <action name="Execute"><command>lilyterm --join --execute mpv cdda://</command></action>
     </item>
   </menu>
 
