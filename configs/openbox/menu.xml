@@ -126,12 +126,6 @@
 
   <separator />
 
-  <item label="Reconfigure">
-    <action name="Reconfigure" />
-  </item>
-
-  <separator />
-
   <menu id="Exit" label="Выключение...">
     <item label="Выйти из системы">
       <action name="Exit">
