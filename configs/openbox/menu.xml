@@ -6,139 +6,139 @@
                 file:///usr/share/openbox/menu.xsd">
 
 <menu id="root-menu" label="Openbox 3">
-  <item label="Эмулятор терминала" icon="/usr/share/icons/Tango/scalable/apps/terminal.svg">
+  <item label="Эмулятор терминала" icon="/usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg">
     <action name="Execute"><command>x-terminal-emulator</command></action>
   </item>
-  <item label="Веб-браузер" icon="/usr/share/icons/Tango/scalable/apps/browser.svg">
+  <item label="Веб-браузер" icon="/usr/share/icons/Faenza/apps/scalable/web-browser.svg">
     <action name="Execute"><command>x-www-browser</command></action>
   </item>
-  <item label="Электронная почта">
+  <item label="Электронная почта" icon="/usr/share/icons/Faenza/actions/scalable/mail-send.svg">
     <action name="Execute"><command>sylpheed</command></action>
   </item>
-  <item label="Файловый менеджер" icon="/usr/share/icons/Tango/scalable/apps/file-manager.svg">
+  <item label="Файловый менеджер" icon="/usr/share/icons/Faenza/apps/scalable/system-file-manager.svg">
     <action name="Execute"><command>spacefm</command></action>
   </item>
-  <item label="Текстовый редактор" icon="/usr/share/icons/Tango/scalable/apps/text-editor.svg">
+  <item label="Текстовый редактор" icon="/usr/share/icons/Faenza/apps/scalable/accessories-text-editor.svg">
     <action name="Execute"><command>geany</command></action>
   </item>
 
   <separator />
 
-  <menu id="client-list-menu" icon="/usr/share/icons/Tango/scalable/apps/preferences-system-windows.svg"/>
+  <menu id="client-list-menu" icon="/usr/share/icons/Faenza/apps/scalable/preferences-system-windows.svg"/>
   
   <separator />
 
-  <menu id="Internet" label="Интернет" icon="/usr/share/icons/Tango/scalable/categories/applications-internet.svg">
-    <item label="Iceweasel" icon="/usr/share/icons/hicolor/scalable/apps/iceweasel.svg">
+  <menu id="Internet" label="Интернет" icon="/usr/share/icons/Faenza/categories/scalable/applications-internet.svg">
+    <item label="Iceweasel" icon="/usr/share/icons/Faenza/apps/scalable/iceweasel.svg">
       <action name="Execute"><command>iceweasel</command></action>
     </item>
-    <item label="Gajim" icon="/usr/share/icons/hicolor/scalable/apps/gajim.svg">
+    <item label="Gajim" icon="/usr/share/icons/Faenza/apps/scalable/xchat.svg">
       <action name="Execute"><command>gajim</command></action>
     </item>
-    <item label="Sylpheed">
+    <item label="Sylpheed" icon="/usr/share/icons/Faenza/apps/scalable/evolution.svg">
       <action name="Execute"><command>sylpheed</command></action>
     </item>
   </menu>
   
-  <menu id="Graphics" label="Графика" icon="/usr/share/icons/Tango/scalable/categories/applications-graphics.svg">
-    <item label="GIMP">
+  <menu id="Graphics" label="Графика" icon="/usr/share/icons/Faenza/categories/scalable/applications-graphics.svg">
+    <item label="GIMP" icon="/usr/share/icons/Faenza/apps/scalable/gimp.svg">
       <action name="Execute"><command>gimp</command></action>
     </item>
     <item label="RawTherapee">
       <action name="Execute"><command>rawtherapee</command></action>
     </item>
-    <item label="Viewnior" icon="/usr/share/icons/hicolor/scalable/apps/viewnior.svg">
+    <item label="Viewnior" icon="/usr/share/icons/Faenza/apps/scalable/eog.svg">
       <action name="Execute"><command>viewnior</command></action>
     </item>
-    <item label="LibreOffice Draw">
+    <item label="LibreOffice Draw" icon="/usr/share/icons/Faenza/apps/scalable/libreoffice-draw.svg">
       <action name="Execute"><command>loffice --draw</command></action>
     </item>
   </menu>
 
-  <menu id="Console" label="Консоль" icon="/usr/share/icons/Tango/scalable/categories/applications-system.svg">
-    <item label="LilyTerm">
+  <menu id="Console" label="Консоль" icon="/usr/share/icons/Faenza/categories/scalable/applications-system.svg">
+    <item label="LilyTerm" icon="/usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg">
       <action name="Execute"><command>lilyterm</command></action>
     </item>
-    <item label="Midnight Commander" icon="/usr/share/icons/hicolor/scalable/apps/mc.svg">
+    <item label="Midnight Commander">
       <action name="Execute"><command>lilyterm --join --execute mc</command></action>
     </item>
-    <item label="htop">
+    <item label="hTop" icon="/usr/share/icons/Faenza/apps/scalable/utilities-system-monitor.svg">
       <action name="Execute"><command>lilyterm --join --execute htop</command></action>
     </item>
   </menu>
   
-  <menu id="Utilites" label="Утилиты" icon="/usr/share/icons/Tango/scalable/categories/applications-accessories.svg">
-    <item label="Geany" icon="/usr/share/icons/hicolor/scalable/apps/geany.svg">
+  <menu id="Utilites" label="Утилиты" icon="/usr/share/icons/Faenza/categories/scalable/applications-accessories.svg">
+    <item label="Geany" icon="/usr/share/icons/Faenza/apps/scalable/geany.svg">
       <action name="Execute"><command>geany</command></action>
     </item>
-    <item label="SpaceFM">
+    <item label="SpaceFM" icon="/usr/share/icons/Faenza/apps/scalable/system-file-manager.svg">
       <action name="Execute"><command>spacefm</command></action>
     </item>
-    <item label="Xarchiver" icon="/usr/share/icons/hicolor/scalable/apps/xarchiver.svg">
+    <item label="Xarchiver" icon="/usr/share/icons/Faenza/apps/scalable/xarchiver.svg">
       <action name="Execute"><command>xarchiver</command></action>
     </item>
-    <item label="Galculator" icon="/usr/share/icons/hicolor/scalable/apps/galculator.svg">
+    <item label="Galculator" icon="/usr/share/icons/Faenza/apps/scalable/galculator.svg">
       <action name="Execute"><command>galculator</command></action>
     </item>
-    <item label="SimpleBurn">
+    <item label="SimpleBurn" icon="/usr/share/icons/Faenza/apps/scalable/brasero.svg">>
       <action name="Execute"><command>simpleburn</command></action>
     </item>
-    <item label="ReportBug">
+    <item label="ReportBug" icon="/usr/share/icons/Faenza/apps/scalable/bug-buddy.svg">
       <action name="Execute"><command>reportbug</command></action>
     </item>
   </menu>
 
-  <menu id="Hardware" label="Оборудование" icon="/usr/share/icons/Tango/scalable/categories/applications-system.svg">
-    <item label="aRandr" icon="/usr/share/icons/Tango/scalable/devices/display.svg">
+  <menu id="Hardware" label="Оборудование" icon="/usr/share/icons/Faenza/categories/scalable/applications-system.svg">
+    <item label="aRandr" icon="/usr/share/icons/Faenza/devices/scalable/video-display.svg">
       <action name="Execute"><command>arandr</command></action>
     </item>
-    <item label="gParted" icon="/usr/share/icons/hicolor/scalable/apps/gparted.svg">
+    <item label="gParted" icon="/usr/share/icons/Faenza/apps/scalable/gparted.svg">
       <action name="Execute"><command>gparted</command></action>
     </item>
   </menu>
   
-  <menu id="Office" label="Офис" icon="/usr/share/icons/Tango/scalable/categories/applications-office.svg">
-    <item label="Evince">
+  <menu id="Office" label="Офис" icon="/usr/share/icons/Faenza/categories/scalable/applications-office.svg">
+    <item label="Evince" icon="/usr/share/icons/Faenza/apps/scalable/evince.svg">
       <action name="Execute"><command>evince</command></action>
     </item>
-    <item label="LibreOffice Writer" icon="/usr/share/icons/hicolor/scalable/apps/libreoffice-writer.svg">
+    <item label="LibreOffice Writer" icon="/usr/share/icons/Faenza/apps/scalable/libreoffice-writer.svg">
       <action name="Execute"><command>loffice --writer</command></action>
     </item>
-    <item label="LibreOffice Calc" icon="/usr/share/icons/hicolor/scalable/apps/libreoffice-calc.svg">
+    <item label="LibreOffice Calc" icon="/usr/share/icons/Faenza/apps/scalable/libreoffice-calc.svg">
       <action name="Execute"><command>loffice --calc</command></action>
     </item>
-    <item label="LibreOffice Impress">
+    <item label="LibreOffice Impress" icon="/usr/share/icons/Faenza/apps/scalable/libreoffice-impress.svg">
       <action name="Execute"><command>loffice --impress</command></action>
     </item>
   </menu>
 
-  <menu id="Media" label="Медиа" icon="/usr/share/icons/Tango/scalable/categories/applications-multimedia.svg">
-    <item label="Радио POLSKASTACJA">
+  <menu id="Media" label="Медиа" icon="/usr/share/icons/Faenza/categories/scalable/applications-multimedia.svg">
+    <item label="Радио POLSKASTACJA" icon="/usr/share/icons/Faenza/apps/scalable/library-internet-radio.svg">
       <action name="Execute"><command>lilyterm --join --execute mpv "http://fm.kiwi.kz:80/radio80italodisco"</command></action>
     </item>
-    <item label="Файл из буфера обмена">
+    <item label="Lien du presse-papiers" icon="/usr/share/icons/Faenza/apps/scalable/evolution-tasks.svg">
       <action name="Execute"><command>lilyterm --join --execute bash -c "mpv \"$(xclip -out -selection clipboard)\""</command></action>
     </item>
-    <item label="Воспроизвести Audio CD">
+    <item label="Démarrer le CD" icon="/usr/share/icons/Faenza/devices/scalable/media-cdrom-audio.svg">
       <action name="Execute"><command>lilyterm --join --execute mpv cdda://</command></action>
     </item>
   </menu>
 
   <separator />
 
-  <menu id="Exit" label="Выключение..." icon="/usr/share/icons/Tango/scalable/emblems/emblem-system.svg">
-    <item label="Выйти из системы" icon="/usr/share/icons/Tango/scalable/actions/system-log-out.svg">
+  <menu id="Exit" label="Выключение..." icon="/usr/share/icons/Faenza/emblems/scalable/emblem-system.svg">
+    <item label="Выйти из системы" icon="/usr/share/icons/Faenza/actions/scalable/system-log-out.svg">
       <action name="Exit">
         <prompt>yes</prompt>
       </action>
     </item>
-    <item label="Перезагрузить">
+    <item label="Перезагрузить" icon="/usr/share/icons/Faenza/apps/scalable/gnome-session-reboot.svg">
       <action name="Execute">
         <prompt>Вы действительно хотите перезагрузить компьютер?</prompt>
         <command>systemctl reboot</command>
       </action>
     </item>
-    <item label="Выключить" icon="/usr/share/icons/Tango/scalable/actions/system-shutdown.svg">
+    <item label="Выключить" icon="/usr/share/icons/Faenza/actions/scalable/system-shutdown.svg">
       <action name="Execute">
         <prompt>Вы действительно хотите выключить компьютер?</prompt>
         <command>systemctl poweroff</command>
