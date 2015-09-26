@@ -6,33 +6,33 @@
                 file:///usr/share/openbox/menu.xsd">
 
 <menu id="root-menu" label="Openbox 3">
-  <item label="Эмулятор терминала">
+  <item label="Эмулятор терминала" icon="/usr/share/icons/Tango/scalable/apps/terminal.svg">
     <action name="Execute"><command>x-terminal-emulator</command></action>
   </item>
-  <item label="Веб-браузер">
+  <item label="Веб-браузер" icon="/usr/share/icons/Tango/scalable/apps/browser.svg">
     <action name="Execute"><command>x-www-browser</command></action>
   </item>
   <item label="Электронная почта">
     <action name="Execute"><command>sylpheed</command></action>
   </item>
-  <item label="Файловый менеджер">
+  <item label="Файловый менеджер" icon="/usr/share/icons/Tango/scalable/apps/file-manager.svg">
     <action name="Execute"><command>spacefm</command></action>
   </item>
-  <item label="Текстовый редактор">
+  <item label="Текстовый редактор" icon="/usr/share/icons/Tango/scalable/apps/text-editor.svg">
     <action name="Execute"><command>geany</command></action>
   </item>
 
   <separator />
 
-  <menu id="client-list-menu"/>
+  <menu id="client-list-menu" icon="/usr/share/icons/Tango/scalable/apps/preferences-system-windows.svg"/>
   
   <separator />
 
-  <menu id="Internet" label="Интернет">
-    <item label="Iceweasel">
+  <menu id="Internet" label="Интернет" icon="/usr/share/icons/Tango/scalable/categories/applications-internet.svg">
+    <item label="Iceweasel" icon="/usr/share/icons/hicolor/scalable/apps/iceweasel.svg">
       <action name="Execute"><command>iceweasel</command></action>
     </item>
-    <item label="Gajim">
+    <item label="Gajim" icon="/usr/share/icons/hicolor/scalable/apps/gajim.svg">
       <action name="Execute"><command>gajim</command></action>
     </item>
     <item label="Sylpheed">
@@ -40,14 +40,14 @@
     </item>
   </menu>
   
-  <menu id="Graphics" label="Графика">
+  <menu id="Graphics" label="Графика" icon="/usr/share/icons/Tango/scalable/categories/applications-graphics.svg">
     <item label="GIMP">
       <action name="Execute"><command>gimp</command></action>
     </item>
     <item label="RawTherapee">
       <action name="Execute"><command>rawtherapee</command></action>
     </item>
-    <item label="Viewnior">
+    <item label="Viewnior" icon="/usr/share/icons/hicolor/scalable/apps/viewnior.svg">
       <action name="Execute"><command>viewnior</command></action>
     </item>
     <item label="LibreOffice Draw">
@@ -55,11 +55,11 @@
     </item>
   </menu>
 
-  <menu id="Console" label="Консоль">
+  <menu id="Console" label="Консоль" icon="/usr/share/icons/Tango/scalable/categories/applications-system.svg">
     <item label="LilyTerm">
       <action name="Execute"><command>lilyterm</command></action>
     </item>
-    <item label="Midnight Commander">
+    <item label="Midnight Commander" icon="/usr/share/icons/hicolor/scalable/apps/mc.svg">
       <action name="Execute"><command>lilyterm --join --execute mc</command></action>
     </item>
     <item label="htop">
@@ -67,17 +67,17 @@
     </item>
   </menu>
   
-  <menu id="Utilites" label="Утилиты">
-    <item label="Geany">
+  <menu id="Utilites" label="Утилиты" icon="/usr/share/icons/Tango/scalable/categories/applications-accessories.svg">
+    <item label="Geany" icon="/usr/share/icons/hicolor/scalable/apps/geany.svg">
       <action name="Execute"><command>geany</command></action>
     </item>
     <item label="SpaceFM">
       <action name="Execute"><command>spacefm</command></action>
     </item>
-    <item label="Xarchiver">
+    <item label="Xarchiver" icon="/usr/share/icons/hicolor/scalable/apps/xarchiver.svg">
       <action name="Execute"><command>xarchiver</command></action>
     </item>
-    <item label="Galculator">
+    <item label="Galculator" icon="/usr/share/icons/hicolor/scalable/apps/galculator.svg">
       <action name="Execute"><command>galculator</command></action>
     </item>
     <item label="SimpleBurn">
@@ -88,23 +88,23 @@
     </item>
   </menu>
 
-  <menu id="Hardware" label="Оборудование">
-    <item label="aRandr">
+  <menu id="Hardware" label="Оборудование" icon="/usr/share/icons/Tango/scalable/categories/applications-system.svg">
+    <item label="aRandr" icon="/usr/share/icons/Tango/scalable/devices/display.svg">
       <action name="Execute"><command>arandr</command></action>
     </item>
-    <item label="gParted">
+    <item label="gParted" icon="/usr/share/icons/hicolor/scalable/apps/gparted.svg">
       <action name="Execute"><command>gparted</command></action>
     </item>
   </menu>
   
-  <menu id="Office" label="Офис">
+  <menu id="Office" label="Офис" icon="/usr/share/icons/Tango/scalable/categories/applications-office.svg">
     <item label="Evince">
       <action name="Execute"><command>evince</command></action>
     </item>
-    <item label="LibreOffice Writer">
+    <item label="LibreOffice Writer" icon="/usr/share/icons/hicolor/scalable/apps/libreoffice-writer.svg">
       <action name="Execute"><command>loffice --writer</command></action>
     </item>
-    <item label="LibreOffice Calc">
+    <item label="LibreOffice Calc" icon="/usr/share/icons/hicolor/scalable/apps/libreoffice-calc.svg">
       <action name="Execute"><command>loffice --calc</command></action>
     </item>
     <item label="LibreOffice Impress">
@@ -112,7 +112,7 @@
     </item>
   </menu>
 
-  <menu id="Media" label="Медиа">
+  <menu id="Media" label="Медиа" icon="/usr/share/icons/Tango/scalable/categories/applications-multimedia.svg">
     <item label="Радио POLSKASTACJA">
       <action name="Execute"><command>lilyterm --join --execute mpv "http://fm.kiwi.kz:80/radio80italodisco"</command></action>
     </item>
@@ -126,8 +126,8 @@
 
   <separator />
 
-  <menu id="Exit" label="Выключение...">
-    <item label="Выйти из системы">
+  <menu id="Exit" label="Выключение..." icon="/usr/share/icons/Tango/scalable/emblems/emblem-system.svg">
+    <item label="Выйти из системы" icon="/usr/share/icons/Tango/scalable/actions/system-log-out.svg">
       <action name="Exit">
         <prompt>yes</prompt>
       </action>
@@ -138,7 +138,7 @@
         <command>systemctl reboot</command>
       </action>
     </item>
-    <item label="Выключить">
+    <item label="Выключить" icon="/usr/share/icons/Tango/scalable/actions/system-shutdown.svg">
       <action name="Execute">
         <prompt>Вы действительно хотите выключить компьютер?</prompt>
         <command>systemctl poweroff</command>

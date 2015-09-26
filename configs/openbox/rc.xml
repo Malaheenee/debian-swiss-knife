@@ -511,8 +511,8 @@
     <hideDelay>200</hideDelay>
     <middle>no</middle>
     <submenuShowDelay>100</submenuShowDelay>
-    <submenuHideDelay>200</submenuHideDelay>
-    <showIcons>no</showIcons>
+    <submenuHideDelay>400</submenuHideDelay>
+    <showIcons>yes</showIcons>
     <manageDesktops>no</manageDesktops>
   </menu>
 
