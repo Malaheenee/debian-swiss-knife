@@ -12,7 +12,7 @@ fi
 #xsetroot -solid '#2D73B8'
 
 # Desktop wallpaper (set path/to/your/wall) | Обои для рабочего стола
-hsetroot -cover /usr/share/images/debian-wall.png
+hsetroot -cover /usr/share/images/debian-wall.png &
 
 # Compositing manager | Тени, прозрачность и т.п.
 compton -b &
