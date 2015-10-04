@@ -12,4 +12,5 @@ fullscreen = no
 osc = yes
 ontop = no
 stop-screensaver = yes
-
+ytdl = yes
+ytdl-format='[height<360]+bestaudio'
