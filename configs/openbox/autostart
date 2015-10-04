@@ -15,7 +15,7 @@ fi
 hsetroot -cover /usr/share/images/debian-wall.png
 
 # Compositing manager | Тени, прозрачность и т.п.
-compton -b --config ${HOME}/my_config/comptonrc &
+compton -b &
 
 # Notifications | Всплывающие уведомления
 /usr/lib/notification-daemon/notification-daemon &
