@@ -10,13 +10,13 @@ All scripts are used in Debian 8.0 ("Jessie") and above
 
 ## Configs: ##
 * *deb-install-configs.sh* -- Install all downloaded config files (in progress);
-* *openbox* folder -- window manager;
-* *gxkb* folder -- keyboard indicator;
-* *gtk* folder -- gtk-apps settings;
-* *tint2rc* -- panel;
-* *mpvrc* -- media player;
-* *comptonrc* -- compositing manager;
-* *lilytermrc* -- advanced terminal emulator;
+* *openbox* folder -- [window manager](http://openbox.org/wiki/Main_Page);
+* *gxkb* folder -- [keyboard indicator](http://sourceforge.net/projects/gxkb);
+* *gtk* folder -- [gtk-apps settings](http://www.gtk.org);
+* *tint2rc* -- [panel](https://gitlab.com/o9000/tint2);
+* *mpvrc* -- [media player](http://mpv.io);
+* *comptonrc* -- [compositing manager](https://github.com/chjj/compton);
+* *lilytermrc* -- [advanced terminal emulator](http://lilyterm.luna.com.tw);
 
 ## FAQ ##
 * *What about tasksel & metapackages?*
