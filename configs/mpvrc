@@ -10,7 +10,6 @@ alang = ru,fr
 slang = ru,fr
 fullscreen = no
 osc = yes
-input-lirc = no
 ontop = no
 stop-screensaver = yes
 
