@@ -6,19 +6,19 @@
                 file:///usr/share/openbox/menu.xsd">
 
 <menu id="root-menu" label="Openbox 3">
-  <item label="Эмулятор терминала" icon="/usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg">
+  <item label="Terminal" icon="/usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg">
     <action name="Execute"><command>x-terminal-emulator</command></action>
   </item>
-  <item label="Веб-браузер" icon="/usr/share/icons/Faenza/apps/scalable/web-browser.svg">
+  <item label="Navigateur Web" icon="/usr/share/icons/Faenza/apps/scalable/web-browser.svg">
     <action name="Execute"><command>x-www-browser</command></action>
   </item>
-  <item label="Электронная почта" icon="/usr/share/icons/Faenza/actions/scalable/mail-send.svg">
+  <item label="Courriel" icon="/usr/share/icons/Faenza/actions/scalable/mail-send.svg">
     <action name="Execute"><command>sylpheed</command></action>
   </item>
-  <item label="Файловый менеджер" icon="/usr/share/icons/Faenza/apps/scalable/system-file-manager.svg">
+  <item label="Mes fichiers" icon="/usr/share/icons/Faenza/apps/scalable/system-file-manager.svg">
     <action name="Execute"><command>spacefm</command></action>
   </item>
-  <item label="Текстовый редактор" icon="/usr/share/icons/Faenza/apps/scalable/accessories-text-editor.svg">
+  <item label="Éditeur de texte" icon="/usr/share/icons/Faenza/apps/scalable/accessories-text-editor.svg">
     <action name="Execute"><command>geany</command></action>
   </item>
 
@@ -28,7 +28,7 @@
   
   <separator />
 
-  <menu id="Internet" label="Интернет" icon="/usr/share/icons/Faenza/categories/scalable/applications-internet.svg">
+  <menu id="Internet" label="Internet" icon="/usr/share/icons/Faenza/categories/scalable/applications-internet.svg">
     <item label="Iceweasel" icon="/usr/share/icons/Faenza/apps/scalable/iceweasel.svg">
       <action name="Execute"><command>iceweasel</command></action>
     </item>
@@ -40,7 +40,7 @@
     </item>
   </menu>
   
-  <menu id="Graphics" label="Графика" icon="/usr/share/icons/Faenza/categories/scalable/applications-graphics.svg">
+  <menu id="Graphics" label="Graphisme" icon="/usr/share/icons/Faenza/categories/scalable/applications-graphics.svg">
     <item label="GIMP" icon="/usr/share/icons/Faenza/apps/scalable/gimp.svg">
       <action name="Execute"><command>gimp</command></action>
     </item>
@@ -55,7 +55,7 @@
     </item>
   </menu>
 
-  <menu id="Console" label="Консоль" icon="/usr/share/icons/Faenza/categories/scalable/applications-system.svg">
+  <menu id="Console" label="Terminal" icon="/usr/share/icons/Faenza/categories/scalable/applications-system.svg">
     <item label="LilyTerm" icon="/usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg">
       <action name="Execute"><command>lilyterm</command></action>
     </item>
@@ -67,7 +67,7 @@
     </item>
   </menu>
   
-  <menu id="Utilites" label="Утилиты" icon="/usr/share/icons/Faenza/categories/scalable/applications-accessories.svg">
+  <menu id="Utilites" label="Utilités" icon="/usr/share/icons/Faenza/categories/scalable/applications-accessories.svg">
     <item label="Geany" icon="/usr/share/icons/Faenza/apps/scalable/geany.svg">
       <action name="Execute"><command>geany</command></action>
     </item>
@@ -88,7 +88,7 @@
     </item>
   </menu>
 
-  <menu id="Hardware" label="Оборудование" icon="/usr/share/icons/Faenza/categories/scalable/applications-system.svg">
+  <menu id="Hardware" label="Matériel" icon="/usr/share/icons/Faenza/categories/scalable/applications-system.svg">
     <item label="aRandr" icon="/usr/share/icons/Faenza/devices/scalable/video-display.svg">
       <action name="Execute"><command>arandr</command></action>
     </item>
@@ -97,7 +97,7 @@
     </item>
   </menu>
   
-  <menu id="Office" label="Офис" icon="/usr/share/icons/Faenza/categories/scalable/applications-office.svg">
+  <menu id="Office" label="Office" icon="/usr/share/icons/Faenza/categories/scalable/applications-office.svg">
     <item label="Evince" icon="/usr/share/icons/Faenza/apps/scalable/evince.svg">
       <action name="Execute"><command>evince</command></action>
     </item>
@@ -112,8 +112,8 @@
     </item>
   </menu>
 
-  <menu id="Media" label="Медиа" icon="/usr/share/icons/Faenza/categories/scalable/applications-multimedia.svg">
-    <item label="Радио POLSKASTACJA" icon="/usr/share/icons/Faenza/apps/scalable/library-internet-radio.svg">
+  <menu id="Media" label="Média" icon="/usr/share/icons/Faenza/categories/scalable/applications-multimedia.svg">
+    <item label="Radio POLSKASTACJA" icon="/usr/share/icons/Faenza/apps/scalable/library-internet-radio.svg">
       <action name="Execute"><command>lilyterm --join --execute mpv "http://stream.polskastacja.pl/ps18"</command></action>
     </item>
     <item label="Lien du presse-papiers" icon="/usr/share/icons/Faenza/apps/scalable/evolution-tasks.svg">
@@ -126,21 +126,21 @@
 
   <separator />
 
-  <menu id="Exit" label="Выключение..." icon="/usr/share/icons/Faenza/emblems/scalable/emblem-system.svg">
-    <item label="Выйти из системы" icon="/usr/share/icons/Faenza/actions/scalable/system-log-out.svg">
+  <menu id="Exit" label="Quitter..." icon="/usr/share/icons/Faenza/emblems/scalable/emblem-system.svg">
+    <item label="Fermer une session" icon="/usr/share/icons/Faenza/actions/scalable/system-log-out.svg">
       <action name="Exit">
         <prompt>yes</prompt>
       </action>
     </item>
-    <item label="Перезагрузить" icon="/usr/share/icons/Faenza/apps/scalable/gnome-session-reboot.svg">
+    <item label="Redémarrer"  icon="/usr/share/icons/Faenza/apps/scalable/gnome-session-reboot.svg">
       <action name="Execute">
-        <prompt>Вы действительно хотите перезагрузить компьютер?</prompt>
+        <prompt>Êtes-vous certain de vouloir redémarrer votre ordinateur?</prompt>
         <command>systemctl reboot</command>
       </action>
     </item>
-    <item label="Выключить" icon="/usr/share/icons/Faenza/actions/scalable/system-shutdown.svg">
+    <item label="Éteindre" icon="/usr/share/icons/Faenza/actions/scalable/system-shutdown.svg">
       <action name="Execute">
-        <prompt>Вы действительно хотите выключить компьютер?</prompt>
+        <prompt>Êtes-vous certain de vouloir éteindre votre ordinateur?</prompt>
         <command>systemctl poweroff</command>
       </action>
     </item>
