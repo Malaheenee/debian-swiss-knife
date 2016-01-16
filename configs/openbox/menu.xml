@@ -114,7 +114,7 @@
 
   <menu id="Media" label="Медиа" icon="/usr/share/icons/Faenza/categories/scalable/applications-multimedia.svg">
     <item label="Радио POLSKASTACJA" icon="/usr/share/icons/Faenza/apps/scalable/library-internet-radio.svg">
-      <action name="Execute"><command>lilyterm --join --execute mpv "http://fm.kiwi.kz:80/radio80italodisco"</command></action>
+      <action name="Execute"><command>lilyterm --join --execute mpv "http://stream.polskastacja.pl/ps18"</command></action>
     </item>
     <item label="Lien du presse-papiers" icon="/usr/share/icons/Faenza/apps/scalable/evolution-tasks.svg">
       <action name="Execute"><command>lilyterm --join --execute bash -c "mpv \"$(xclip -out -selection clipboard)\""</command></action>
