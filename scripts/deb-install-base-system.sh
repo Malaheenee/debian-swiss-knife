@@ -15,6 +15,14 @@ APT_PACKAGES=""
 APT_SOURCES_FILE="/etc/apt/sources.list"
 PKG_SELECT=""
 
+# Different vars
+USRNM=$(grep -oe "^.*x:1000" /etc/passwd)
+USRHP=$(grep -oe ":1000.*\/.*:" /etc/passwd)
+USR=${USRNM:0:$(expr index "${USRNM}" :)-1}
+PROFILE_FILE=${USRHP:$(expr index "${USRHP}" /)-1:(-1)}/.profile
+TTY1_FILE="/etc/systemd/system/getty@tty1.service.d/override.conf"
+AGETTY=$(which agetty)
+
 # Verify user uid
 runs_as_root() {
     if [ ${UID} -ne ${ROOT_UID} ]; then
@@ -61,11 +69,12 @@ user_selection() {
     esac
 
     if [[ ${PKG_SELECT} != "base" ]]; then
-        read -p "What display manager you want to use: [l]ightdm or [k]dm (default \"lightdm\"): "
+        read -p "What display manager you want to use: [l]ightdm, [k]dm or [w]ithout DM (default \"lightdm\"): "
         case ${REPLY} in
             K|k ) PKG_SELECT+=" kdm" ;;
             L|l|"" ) PKG_SELECT+=" lightdm" ;;
-            [^KkLl]* ) echo "Wrong selection. Aborted."; exit 1 ;;
+            W|w|"" ) PKG_SELECT+=" withoutdm" ;;
+            [^KkLlWw]* ) echo "Wrong selection. Aborted."; exit 1 ;;
         esac
     fi
 
@@ -112,6 +121,11 @@ user_selection() {
         fi
     elif [[ ${PKG_SELECT} =~ "kdm" ]]; then
         APT_PACKAGES+=" kdm"
+    elif [[ ${PKG_SELECT} =~ "withoutdm" ]]; then
+        echo "[Service]" > ${TTY1_FILE}
+        echo "ExecStart=" >> ${TTY1_FILE}
+        echo "ExecStart=-${AGETTY} --autologin ${USR} --noclear %I 38400 linux" >> ${TTY1_FILE}
+        echo '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx' >> ${PROFILE_FILE}
     fi
 }
 
