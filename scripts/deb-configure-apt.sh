@@ -37,6 +37,11 @@ configure_apt() {
         echo "deb ${REPO_URL}/debian/ $repo main contrib non-free" >> ${APT_SOURCES_FILE}
     done
     
+    if [[ ${REPO_LIST} =~ "stable" ]]; then
+        echo "deb ${REPO_URL}/debian/ stable-updates main contrib non-free" >> ${APT_SOURCES_FILE}
+        echo "deb http://security.debian.org/ stable/updates main contrib non-free" >> ${APT_SOURCES_FILE}
+    fi
+
     if [ ! -e ${APT_CONF_FILE} ]; then
         touch ${APT_CONF_FILE}
     fi
