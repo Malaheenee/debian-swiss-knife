@@ -33,8 +33,8 @@ configure_apt() {
         touch ${APT_SOURCES_FILE}
     fi
     
-    for i in ${REPO_LIST}; do
-        echo "deb ${REPO_URL}/debian/ $i main contrib non-free" >> ${APT_SOURCES_FILE}
+    for repo in ${REPO_LIST}; do
+        echo "deb ${REPO_URL}/debian/ $repo main contrib non-free" >> ${APT_SOURCES_FILE}
     done
     
     if [ ! -e ${APT_CONF_FILE} ]; then
