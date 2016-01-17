@@ -8,7 +8,7 @@ ROOT_UID=0
 E_NOTROOT=101
 
 # APT vars
-APT_PROGRAM="apt-get"
+APT_PROGRAM=$(which apt-get)
 APT_COMMAND="install"
 APT_OPTIONS="-qy"
 APT_PACKAGES=""
