@@ -20,7 +20,7 @@ USRNM=$(grep -oe "^.*x:1000" /etc/passwd)
 USRHP=$(grep -oe ":1000.*\/.*:" /etc/passwd)
 USR=${USRNM:0:$(expr index "${USRNM}" :)-1}
 PROFILE_FILE=${USRHP:$(expr index "${USRHP}" /)-1:(-1)}/.profile
-TTY1_FILE="/etc/systemd/system/getty@tty1.service.d/override.conf"
+TTY1_FILE="/etc/systemd/system/getty@tty1.service.d"
 AGETTY=$(which agetty)
 
 # Verify user uid
@@ -122,6 +122,8 @@ user_selection() {
     elif [[ ${PKG_SELECT} =~ "kdm" ]]; then
         APT_PACKAGES+=" kdm"
     elif [[ ${PKG_SELECT} =~ "withoutdm" ]]; then
+        mkdir -p ${TTY1_FILE}
+        TTY_FILE+="/override.conf"
         echo "[Service]" > ${TTY1_FILE}
         echo "ExecStart=" >> ${TTY1_FILE}
         echo "ExecStart=-${AGETTY} --autologin ${USR} --noclear %I 38400 linux" >> ${TTY1_FILE}
