@@ -98,7 +98,7 @@ user_selection() {
         xfce4-xkb-plugin xfce4-screenshooter xfce4-power-manager \
         gtk2-engines-xfce gtk3-engines-xfce xfce4-terminal \
         xfwm4-themes orage xfce4-appfinder xfce4-places-plugin \
-        xfce4-weather-plugin libxfce4ui-utils galculator"
+        xfce4-weather-plugin libxfce4ui-utils galculator gvfs"
     elif [[ ${PKG_SELECT} =~ "kde" ]]; then
         APT_PACKAGES+=" dolphin kde-l10n-ru kde-window-manager \
         kde-baseapps-bin kde-workspace-bin polkit-kde-1 oxygencursors \
