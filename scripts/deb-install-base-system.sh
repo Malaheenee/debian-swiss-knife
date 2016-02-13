@@ -121,13 +121,6 @@ user_selection() {
         fi
     elif [[ ${PKG_SELECT} =~ "kdm" ]]; then
         APT_PACKAGES+=" kdm"
-    elif [[ ${PKG_SELECT} =~ "withoutdm" ]]; then
-        mkdir -p ${TTY1_FILE}
-        TTY_FILE+="/override.conf"
-        echo "[Service]" > ${TTY1_FILE}
-        echo "ExecStart=" >> ${TTY1_FILE}
-        echo "ExecStart=-${AGETTY} --autologin ${USR} --noclear %I 38400 linux" >> ${TTY1_FILE}
-        echo '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx' >> ${PROFILE_FILE}
     fi
 }
 
@@ -139,6 +132,13 @@ proceed_to_install() {
             is_apt_configured
             echo -n "Installation of packages... "
             eval ${APT_PROGRAM} ${APT_COMMAND} ${APT_OPTIONS} ${APT_PACKAGES}
+            if [[ ${PKG_SELECT} =~ "withoutdm" ]]; then
+                mkdir -p ${TTY1_FILE}
+                TTY1_FILE+="/override.conf"
+                echo "[Service]" > ${TTY1_FILE}
+                echo "ExecStart=" >> ${TTY1_FILE}
+                echo "ExecStart=-${AGETTY} --autologin ${USR} --noclear %I 38400 linux" >> ${TTY1_FILE}
+                echo '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx' >> ${PROFILE_FILE}
             echo "Done."
             exit 0
         ;;
