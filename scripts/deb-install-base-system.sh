@@ -88,7 +88,7 @@ user_selection() {
         APT_PACKAGES+=" xfonts-base xfonts-scalable xserver-common xinit \
         xserver-xorg xserver-xorg-video-fbdev xserver-xorg-video-vesa \
         xserver-xorg-input-evdev libnotify-bin xdg-utils xdg-user-dirs \
-        cups-bsd faenza-icon-theme dmz-cursor-theme fonts-droid xclip"
+        cups-bsd faenza-icon-theme dmz-cursor-theme fonts-droid-fallback xclip"
     fi
 
     if [[ ${PKG_SELECT} =~ "xfce" ]]; then
