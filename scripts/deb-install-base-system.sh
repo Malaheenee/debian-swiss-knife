@@ -139,6 +139,7 @@ proceed_to_install() {
                 echo "ExecStart=" >> ${TTY1_FILE}
                 echo "ExecStart=-${AGETTY} --autologin ${USR} --noclear %I 38400 linux" >> ${TTY1_FILE}
                 echo '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx' >> ${PROFILE_FILE}
+            fi
             echo "Done."
             exit 0
         ;;
