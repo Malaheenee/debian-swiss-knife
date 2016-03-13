@@ -59,10 +59,11 @@ is_apt_configured() {
 # Select packages for installation
 user_selection() {
     echo "This script installs all basic and GUI packages without annoying dependencies."
-    read -p "What you want to install first: [b]ase system, [k]de, [x]fce, [o]penbox (default \"openbox\"): "
+    read -p "What you want to install first: [b]ase system, [k]de, [m]ate, [x]fce, [o]penbox (default \"openbox\"): "
     case ${REPLY} in
         B|b ) PKG_SELECT+="base" ;;
         K|k ) PKG_SELECT+="base kde" ;;
+        M|m ) PKG_SELECT+="base mate" ;;
         O|o|"" ) PKG_SELECT+="base openbox" ;;
         X|x ) PKG_SELECT+="base xfce" ;;
         [^BbKkMmXx]* ) echo "Wrong selection. Aborted."; exit 1 ;;
@@ -99,6 +100,12 @@ user_selection() {
         gtk2-engines-xfce gtk3-engines-xfce xfce4-terminal \
         xfwm4-themes orage xfce4-appfinder xfce4-places-plugin \
         xfce4-weather-plugin libxfce4ui-utils galculator gvfs"
+    elif [[ ${PKG_SELECT} =~ "mate" ]]; then
+        APT_PACKAGES+=" marco caja pluma mate-terminal mate-panel \
+        mate-notification-daemon mate-session-manager mate-screensaver \
+        engrampa atril eom mate-power-manager mate-themes mate-icon-theme \
+        mate-backgrounds mate-desktop mate-control-center mate-applets \
+        mate-menus mate-utils mate-system-monitor"
     elif [[ ${PKG_SELECT} =~ "kde" ]]; then
         APT_PACKAGES+=" dolphin kde-l10n-ru kde-window-manager \
         kde-baseapps-bin kde-workspace-bin polkit-kde-1 oxygencursors \
