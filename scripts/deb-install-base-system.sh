@@ -59,11 +59,11 @@ is_apt_configured() {
 # Select packages for installation
 user_selection() {
     echo "This script installs all basic and GUI packages without annoying dependencies."
-    read -p "What you want to install first: [b]ase system, [k]de, [x]fce, [m]ixed (default \"mixed\"): "
+    read -p "What you want to install first: [b]ase system, [k]de, [x]fce, [o]penbox (default \"openbox\"): "
     case ${REPLY} in
         B|b ) PKG_SELECT+="base" ;;
         K|k ) PKG_SELECT+="base kde" ;;
-        M|m|"" ) PKG_SELECT+="base mixed" ;;
+        O|o|"" ) PKG_SELECT+="base openbox" ;;
         X|x ) PKG_SELECT+="base xfce" ;;
         [^BbKkMmXx]* ) echo "Wrong selection. Aborted."; exit 1 ;;
     esac
@@ -84,7 +84,7 @@ user_selection() {
         xz-utils libiso9660-8 unrar policykit-1 acpi-support"
     fi
 
-    if [[ ${PKG_SELECT} =~ "xfce"|"kde"|"mixed" ]]; then
+    if [[ ${PKG_SELECT} =~ "xfce"|"kde"|"openbox" ]]; then
         APT_PACKAGES+=" xfonts-base xfonts-scalable xserver-common xinit \
         xserver-xorg xserver-xorg-video-fbdev xserver-xorg-video-vesa \
         xserver-xorg-input-evdev libnotify-bin xdg-utils xdg-user-dirs \
@@ -106,7 +106,7 @@ user_selection() {
         libkdesu5 kdesudo kde-runtime gwenview systemsettings konsole \
         kate kmix ark kwalletmanager kfind phonon-backend-gstreamer \
         ksysguard ksnapshot akonadi-backend-sqlite sqlite3 kcalc"
-    elif [[ ${PKG_SELECT} =~ "mixed" ]]; then
+    elif [[ ${PKG_SELECT} =~ "openbox" ]]; then
         APT_PACKAGES+=" openbox hsetroot gmrun gsimplecal arandr \
         notification-daemon tint2 gxkb volumeicon-alsa compton spacefm \
         udevil lilyterm viewnior xarchiver galculator geany scrot"
