@@ -93,7 +93,7 @@
       <action name="Execute"><command>/usr/bin/arandr</command></action>
     </item>
     <item label="gParted" icon="/usr/share/icons/Faenza/apps/scalable/gparted.svg">
-      <action name="Execute"><command>/usr/sbin/gparted</command></action>
+      <action name="Execute"><command>/usr/bin/gparted-pkexec</command></action>
     </item>
   </menu>
   
