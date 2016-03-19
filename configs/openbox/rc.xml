@@ -169,31 +169,31 @@
     <!-- Run web-browser | Запуск веб-браузера -->
     <keybind key="W-b">
       <action name="Execute">
-        <command>iceweasel</command>
+        <command>/usr/bin/iceweasel</command>
       </action>
     </keybind>
     <!-- Run text editor | Запуск текстового редактора -->
     <keybind key="W-e">
       <action name="Execute">
-        <command>geany</command>
+        <command>/usr/bin/geany</command>
       </action>
     </keybind>
     <!-- Run file manager | Запуск файлового менеджера -->
     <keybind key="W-f">
       <action name="Execute">
-        <command>spacefm</command>
+        <command>/usr/bin/spacefm</command>
       </action>
     </keybind>
     <!-- Run terminal emulator | Запуск эмулятора терминала -->
     <keybind key="W-t">
       <action name="Execute">
-        <command>lilyterm</command>
+        <command>/usr/bin/lilyterm</command>
       </action>
     </keybind>
     <!-- Run system monitor | Запуск системного монитора -->
     <keybind key="W-h">
       <action name="Execute">
-        <command>lilyterm --join --execute htop</command>
+        <command>/usr/bin/lilyterm --join --execute /usr/bin/htop</command>
       </action>
     </keybind>
     <!-- Run audioplayer | Запуск аудиоплеера -->
@@ -205,19 +205,19 @@
     <!-- Run calculator | Запуск калькулятора -->
     <keybind key="W-c">
       <action name="Execute">
-        <command>galculator</command>
+        <command>/usr/bin/galculator</command>
       </action>
     </keybind>
     <!-- Window screenshot | Снимок окна -->
     <keybind key="C-Print">
       <action name="Execute">
-        <command>scrot -uzb -e 'mv $f ~/Images/'</command>
+        <command>/usr/bin/scrot -uzb -e 'mv $f ~/Images/'</command>
       </action>
     </keybind>
     <!-- Desktop screenshot | Снимок экрана -->
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot -z -e 'mv $f ~/Images/'</command>
+        <command>/usr/bin/scrot -z -e 'mv $f ~/Images/'</command>
       </action>
     </keybind>
   </keyboard>

@@ -7,19 +7,19 @@
 
 <menu id="root-menu" label="Openbox 3">
   <item label="Terminal" icon="/usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg">
-    <action name="Execute"><command>x-terminal-emulator</command></action>
+    <action name="Execute"><command>/usr/bin/x-terminal-emulator</command></action>
   </item>
   <item label="Navigateur Web" icon="/usr/share/icons/Faenza/apps/scalable/web-browser.svg">
-    <action name="Execute"><command>x-www-browser</command></action>
+    <action name="Execute"><command>/usr/bin/x-www-browser</command></action>
   </item>
   <item label="Courriel" icon="/usr/share/icons/Faenza/actions/scalable/mail-send.svg">
-    <action name="Execute"><command>sylpheed</command></action>
+    <action name="Execute"><command>/usr/bin/sylpheed</command></action>
   </item>
   <item label="Mes fichiers" icon="/usr/share/icons/Faenza/apps/scalable/system-file-manager.svg">
-    <action name="Execute"><command>spacefm</command></action>
+    <action name="Execute"><command>/usr/bin/spacefm</command></action>
   </item>
   <item label="Éditeur de texte" icon="/usr/share/icons/Faenza/apps/scalable/accessories-text-editor.svg">
-    <action name="Execute"><command>geany</command></action>
+    <action name="Execute"><command>/usr/bin/geany</command></action>
   </item>
 
   <separator />
@@ -30,97 +30,97 @@
 
   <menu id="Internet" label="Internet" icon="/usr/share/icons/Faenza/categories/scalable/applications-internet.svg">
     <item label="Iceweasel" icon="/usr/share/icons/Faenza/apps/scalable/iceweasel.svg">
-      <action name="Execute"><command>iceweasel</command></action>
+      <action name="Execute"><command>/usr/bin/iceweasel</command></action>
     </item>
     <item label="Gajim" icon="/usr/share/icons/Faenza/apps/scalable/xchat.svg">
-      <action name="Execute"><command>gajim</command></action>
+      <action name="Execute"><command>/usr/bin/gajim</command></action>
     </item>
     <item label="Sylpheed" icon="/usr/share/icons/Faenza/apps/scalable/evolution.svg">
-      <action name="Execute"><command>sylpheed</command></action>
+      <action name="Execute"><command>/usr/bin/sylpheed</command></action>
     </item>
   </menu>
   
   <menu id="Graphics" label="Graphisme" icon="/usr/share/icons/Faenza/categories/scalable/applications-graphics.svg">
     <item label="GIMP" icon="/usr/share/icons/Faenza/apps/scalable/gimp.svg">
-      <action name="Execute"><command>gimp</command></action>
+      <action name="Execute"><command>/usr/bin/gimp</command></action>
     </item>
     <item label="RawTherapee">
-      <action name="Execute"><command>rawtherapee</command></action>
+      <action name="Execute"><command>/usr/bin/rawtherapee</command></action>
     </item>
     <item label="Viewnior" icon="/usr/share/icons/Faenza/apps/scalable/eog.svg">
-      <action name="Execute"><command>viewnior</command></action>
+      <action name="Execute"><command>/usr/bin/viewnior</command></action>
     </item>
     <item label="LibreOffice Draw" icon="/usr/share/icons/Faenza/apps/scalable/libreoffice-draw.svg">
-      <action name="Execute"><command>loffice --draw</command></action>
+      <action name="Execute"><command>/usr/bin/loffice --draw</command></action>
     </item>
   </menu>
 
   <menu id="Console" label="Terminal" icon="/usr/share/icons/Faenza/categories/scalable/applications-system.svg">
     <item label="LilyTerm" icon="/usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg">
-      <action name="Execute"><command>lilyterm</command></action>
+      <action name="Execute"><command>/usr/bin/lilyterm</command></action>
     </item>
     <item label="Midnight Commander">
-      <action name="Execute"><command>lilyterm --join --execute mc</command></action>
+      <action name="Execute"><command>/usr/bin/lilyterm --join --execute /usr/bin/mc</command></action>
     </item>
     <item label="hTop" icon="/usr/share/icons/Faenza/apps/scalable/utilities-system-monitor.svg">
-      <action name="Execute"><command>lilyterm --join --execute htop</command></action>
+      <action name="Execute"><command>/usr/bin/lilyterm --join --execute /usr/bin/htop</command></action>
     </item>
   </menu>
   
   <menu id="Utilites" label="Utilités" icon="/usr/share/icons/Faenza/categories/scalable/applications-accessories.svg">
     <item label="Geany" icon="/usr/share/icons/Faenza/apps/scalable/geany.svg">
-      <action name="Execute"><command>geany</command></action>
+      <action name="Execute"><command>/usr/bin/geany</command></action>
     </item>
     <item label="SpaceFM" icon="/usr/share/icons/Faenza/apps/scalable/system-file-manager.svg">
-      <action name="Execute"><command>spacefm</command></action>
+      <action name="Execute"><command>/usr/bin/spacefm</command></action>
     </item>
     <item label="Xarchiver" icon="/usr/share/icons/Faenza/apps/scalable/xarchiver.svg">
-      <action name="Execute"><command>xarchiver</command></action>
+      <action name="Execute"><command>/usr/bin/xarchiver</command></action>
     </item>
     <item label="Galculator" icon="/usr/share/icons/Faenza/apps/scalable/galculator.svg">
-      <action name="Execute"><command>galculator</command></action>
+      <action name="Execute"><command>/usr/bin/galculator</command></action>
     </item>
     <item label="SimpleBurn" icon="/usr/share/icons/Faenza/apps/scalable/brasero.svg">>
-      <action name="Execute"><command>simpleburn</command></action>
+      <action name="Execute"><command>/usr/bin/simpleburn</command></action>
     </item>
     <item label="ReportBug" icon="/usr/share/icons/Faenza/apps/scalable/bug-buddy.svg">
-      <action name="Execute"><command>reportbug</command></action>
+      <action name="Execute"><command>/usr/bin/reportbug</command></action>
     </item>
   </menu>
 
   <menu id="Hardware" label="Matériel" icon="/usr/share/icons/Faenza/categories/scalable/applications-system.svg">
     <item label="aRandr" icon="/usr/share/icons/Faenza/devices/scalable/video-display.svg">
-      <action name="Execute"><command>arandr</command></action>
+      <action name="Execute"><command>/usr/bin/arandr</command></action>
     </item>
     <item label="gParted" icon="/usr/share/icons/Faenza/apps/scalable/gparted.svg">
-      <action name="Execute"><command>gparted</command></action>
+      <action name="Execute"><command>/usr/sbin/gparted</command></action>
     </item>
   </menu>
   
   <menu id="Office" label="Office" icon="/usr/share/icons/Faenza/categories/scalable/applications-office.svg">
     <item label="Evince" icon="/usr/share/icons/Faenza/apps/scalable/evince.svg">
-      <action name="Execute"><command>evince</command></action>
+      <action name="Execute"><command>/usr/bin/evince</command></action>
     </item>
     <item label="LibreOffice Writer" icon="/usr/share/icons/Faenza/apps/scalable/libreoffice-writer.svg">
-      <action name="Execute"><command>loffice --writer</command></action>
+      <action name="Execute"><command>/usr/bin/loffice --writer</command></action>
     </item>
     <item label="LibreOffice Calc" icon="/usr/share/icons/Faenza/apps/scalable/libreoffice-calc.svg">
-      <action name="Execute"><command>loffice --calc</command></action>
+      <action name="Execute"><command>/usr/bin/loffice --calc</command></action>
     </item>
     <item label="LibreOffice Impress" icon="/usr/share/icons/Faenza/apps/scalable/libreoffice-impress.svg">
-      <action name="Execute"><command>loffice --impress</command></action>
+      <action name="Execute"><command>/usr/bin/loffice --impress</command></action>
     </item>
   </menu>
 
   <menu id="Media" label="Média" icon="/usr/share/icons/Faenza/categories/scalable/applications-multimedia.svg">
     <item label="Radio POLSKASTACJA" icon="/usr/share/icons/Faenza/apps/scalable/library-internet-radio.svg">
-      <action name="Execute"><command>lilyterm --join --execute mpv "http://stream.polskastacja.pl/ps18"</command></action>
+      <action name="Execute"><command>/usr/bin/lilyterm --join --execute /usr/bin/mpv "http://stream.polskastacja.pl/ps18"</command></action>
     </item>
     <item label="Lien du presse-papiers" icon="/usr/share/icons/Faenza/apps/scalable/evolution-tasks.svg">
-      <action name="Execute"><command>lilyterm --join --execute bash -c "mpv \"$(xclip -out -selection clipboard)\""</command></action>
+      <action name="Execute"><command>/usr/bin/lilyterm --join --execute bash -c "/usr/bin/mpv \"$(/usr/bin/xclip -out -selection clipboard)\""</command></action>
     </item>
     <item label="Démarrer le CD" icon="/usr/share/icons/Faenza/devices/scalable/media-cdrom-audio.svg">
-      <action name="Execute"><command>lilyterm --join --execute mpv cdda://</command></action>
+      <action name="Execute"><command>/usr/bin/lilyterm --join --execute /usr/bin/mpv cdda://</command></action>
     </item>
   </menu>
 
@@ -135,13 +135,13 @@
     <item label="Redémarrer"  icon="/usr/share/icons/Faenza/apps/scalable/gnome-session-reboot.svg">
       <action name="Execute">
         <prompt>Êtes-vous certain de vouloir redémarrer votre ordinateur?</prompt>
-        <command>systemctl reboot</command>
+        <command>/bin/systemctl reboot</command>
       </action>
     </item>
     <item label="Éteindre" icon="/usr/share/icons/Faenza/actions/scalable/system-shutdown.svg">
       <action name="Execute">
         <prompt>Êtes-vous certain de vouloir éteindre votre ordinateur?</prompt>
-        <command>systemctl poweroff</command>
+        <command>/bin/systemctl poweroff</command>
       </action>
     </item>
   </menu>
