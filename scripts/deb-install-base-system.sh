@@ -85,7 +85,7 @@ user_selection() {
         xz-utils libiso9660-8 unrar policykit-1 acpi-support"
     fi
 
-    if [[ ${PKG_SELECT} =~ "xfce"|"kde"|"openbox" ]]; then
+    if [[ ${PKG_SELECT} != "base" ]]; then
         APT_PACKAGES+=" xfonts-base xfonts-scalable xserver-common xinit \
         xserver-xorg xserver-xorg-video-fbdev xserver-xorg-video-vesa \
         xserver-xorg-input-evdev libnotify-bin xdg-utils xdg-user-dirs \
