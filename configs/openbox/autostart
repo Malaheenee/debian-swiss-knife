@@ -20,6 +20,9 @@ compton -b &
 # Notifications | Всплывающие уведомления
 /usr/lib/notification-daemon/notification-daemon &
 
+# PolicyKit authentification agent | Поддержка Policykit
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
 # Simple panel | Панель
 tint2 &
 

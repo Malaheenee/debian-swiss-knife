@@ -116,7 +116,8 @@ user_selection() {
     elif [[ ${PKG_SELECT} =~ "openbox" ]]; then
         APT_PACKAGES+=" openbox hsetroot gmrun gsimplecal arandr \
         notification-daemon tint2 gxkb volumeicon-alsa compton spacefm \
-        udevil lilyterm viewnior xarchiver galculator geany scrot"
+        udevil lilyterm viewnior xarchiver galculator geany scrot \
+        policykit-1-gnome"
     fi
 
     if [[ ${PKG_SELECT} =~ "lightdm" ]]; then
