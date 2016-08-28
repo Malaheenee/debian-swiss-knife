@@ -169,7 +169,7 @@
     <!-- Run web-browser | Запуск веб-браузера -->
     <keybind key="W-b">
       <action name="Execute">
-        <command>/usr/bin/iceweasel</command>
+        <command>/usr/bin/firefox</command>
       </action>
     </keybind>
     <!-- Run text editor | Запуск текстового редактора -->

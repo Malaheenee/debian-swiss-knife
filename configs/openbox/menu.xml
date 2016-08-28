@@ -29,8 +29,8 @@
   <separator />
 
   <menu id="Internet" label="Internet" icon="/usr/share/icons/Faenza/categories/scalable/applications-internet.svg">
-    <item label="Iceweasel" icon="/usr/share/icons/Faenza/apps/scalable/iceweasel.svg">
-      <action name="Execute"><command>/usr/bin/iceweasel</command></action>
+    <item label="Firefox" icon="/usr/share/icons/Faenza/apps/scalable/firefox.svg">
+      <action name="Execute"><command>/usr/bin/firefox</command></action>
     </item>
     <item label="Gajim" icon="/usr/share/icons/Faenza/apps/scalable/xchat.svg">
       <action name="Execute"><command>/usr/bin/gajim</command></action>
