@@ -74,10 +74,10 @@
     <item label="SpaceFM" icon="/usr/share/icons/Faenza/apps/scalable/system-file-manager.svg">
       <action name="Execute"><command>/usr/bin/spacefm</command></action>
     </item>
-    <item label="Xarchiver" icon="/usr/share/icons/Faenza/apps/scalable/xarchiver.svg">
+    <item label="Xarchiver" icon="/usr/share/icons/Faenza/apps/scalable/file-roller.svg">
       <action name="Execute"><command>/usr/bin/xarchiver</command></action>
     </item>
-    <item label="Galculator" icon="/usr/share/icons/Faenza/apps/scalable/galculator.svg">
+    <item label="Galculator" icon="/usr/share/icons/Faenza/apps/scalable/accessories-calculator.svg">
       <action name="Execute"><command>/usr/bin/galculator</command></action>
     </item>
     <item label="SimpleBurn" icon="/usr/share/icons/Faenza/apps/scalable/brasero.svg">>
