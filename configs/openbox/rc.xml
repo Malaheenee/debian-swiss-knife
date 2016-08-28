@@ -205,13 +205,13 @@
     <!-- Window screenshot | Снимок окна -->
     <keybind key="C-Print">
       <action name="Execute">
-        <command>/usr/bin/scrot -uzb -e 'mv $f ~/Images/'</command>
+        <command>/usr/bin/scrot -uzb -f /tmp/clip.png -e 'xclip -selection cliboard -target image/png $f'</command>
       </action>
     </keybind>
     <!-- Desktop screenshot | Снимок экрана -->
     <keybind key="Print">
       <action name="Execute">
-        <command>/usr/bin/scrot -z -e 'mv $f ~/Images/'</command>
+        <command>/usr/bin/scrot -z -f /tmp/clip.png -e 'xclip -selection cliboard -target image/png $f'</command>
       </action>
     </keybind>
   </keyboard>
