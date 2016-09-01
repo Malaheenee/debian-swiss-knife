@@ -226,13 +226,9 @@
   <mouse>
     <dragThreshold>10</dragThreshold>
     <doubleClickTime>500</doubleClickTime>
+    <!-- Change Desktops when mouse pointer touches the edge of the screen -->
     <screenEdgeWarpTime>400</screenEdgeWarpTime>
-    <!-- Time before changing desktops when the pointer touches the edge of the
-       screen while moving a window, in milliseconds (1000 = 1 second).
-       Set this to 0 to disable warping -->
     <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
-    <!-- Set this to TRUE to move the mouse pointer across the desktop when
-       switching due to hitting the edge of the screen -->
 
     <!-- Mouse behavoir depends on pointer position | Поведение мыши зависит от позиции указателя -->
     <!-- Window frame | Рамка окна -->
