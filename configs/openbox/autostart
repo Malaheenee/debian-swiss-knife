@@ -1,18 +1,7 @@
 # Autostarted apps | Автоматический запуск приложений
 
-# Screen detection | Определение видеовыходов
-LVDS="LVDS1"
-CONNECTED_OUTPUT=$(xrandr -q | grep -iE "\bconnected\b" | cut -d " " -f1)
-if [ "$CONNECTED_OUTPUT" != "$LVDS" ]; then
-  CONNECTED_OUTPUT=$(echo $CONNECTED_OUTPUT | sed s/$LVDS//)
-  xrandr --output $LVDS --off --output $CONNECTED_OUTPUT --auto
-fi
-
-# Desktop color (uncomment if no wallpaper used) | Цвет рабочего стола
-#xsetroot -solid '#2D73B8'
-
-# Desktop wallpaper (set path/to/your/wall) | Обои для рабочего стола
-hsetroot -cover /usr/share/images/debian-wall.png &
+# Screen detection & desktop wallpaper | Определение видеовыходов и обои рабочего стола
+~/.config/openbox/scripts/keys-lcd.sh
 
 # Compositing manager | Тени, прозрачность и т.п.
 compton -b &

@@ -95,6 +95,9 @@
     <item label="gParted" icon="/usr/share/icons/Faenza/apps/scalable/gparted.svg">
       <action name="Execute"><command>/usr/bin/gparted-pkexec</command></action>
     </item>
+    <item label="Changer la sortie vidéo" icon="/usr/share/icons/Faenza/devices/scalable/video-display.svg">
+      <action name="Execute"><command>~/.config/openbox/scripts/keys-lcd.sh</command></action>
+    </item>
   </menu>
   
   <menu id="Office" label="Office" icon="/usr/share/icons/Faenza/categories/scalable/applications-office.svg">
