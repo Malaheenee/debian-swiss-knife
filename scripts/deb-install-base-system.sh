@@ -105,7 +105,7 @@ user_selection() {
         mate-notification-daemon mate-session-manager mate-screensaver \
         engrampa atril eom mate-power-manager mate-themes mate-icon-theme \
         mate-backgrounds mate-desktop mate-control-center mate-applets \
-        mate-menus mate-utils mate-system-monitor"
+        mate-menus mate-utils mate-system-monitor mate-polkit"
     elif [[ ${PKG_SELECT} =~ "kde" ]]; then
         APT_PACKAGES+=" dolphin kde-l10n-ru kde-window-manager \
         kde-baseapps-bin kde-workspace-bin polkit-kde-1 oxygencursors \
