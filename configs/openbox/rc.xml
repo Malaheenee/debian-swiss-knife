@@ -128,7 +128,7 @@
     <!-- gmrun | Запуск командной строки -->
     <keybind key="A-F2">
       <action name="Execute">
-        <command>gmrun</command>
+        <command>/usr/bin/gmrun</command>
       </action>
     </keybind>
     <!-- Show window menu | Показать меню окна -->
